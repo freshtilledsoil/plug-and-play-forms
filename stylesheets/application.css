@@ -338,24 +338,30 @@ input,
 textarea,
 select,
 .uneditable-input {
-  display: inline-block;
-  width: 210px;
-  height: 18px;
-  padding: 4px;
-  margin-bottom: 9px;
-  font-size: 12px;
-  line-height: 18px;
-  color: #555555;
-  border: 1px solid #999999;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  border: 1px solid #999999;
+  color: #555555;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 9px;
+  padding: 4px;
+  width: 300px; }
 
 .uneditable-textarea {
-  width: auto;
-  height: auto; }
+  height: auto;
+  width: auto; }
 
 label input,
 label textarea,
@@ -502,31 +508,6 @@ select:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
-.input-mini {
-  width: 60px; }
-
-.input-small {
-  width: 90px; }
-
-.input-medium {
-  width: 150px; }
-
-.input-large {
-  width: 210px; }
-
-.input-xlarge {
-  width: 270px; }
-
-.input-xxlarge {
-  width: 530px; }
-
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"],
-.uneditable-input {
-  float: none;
-  margin-left: 0; }
-
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -538,7 +519,7 @@ textarea[readonly] {
   cursor: not-allowed; }
 
 .form-actions {
-  padding: 18px 0;
+  padding-top: 18px;
   margin-top: 18px;
   background-color: #f5f5f5;
   border-top: 1px solid #eeeeee; }
@@ -551,108 +532,6 @@ textarea[readonly] {
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   cursor: not-allowed; }
-
-.help-block {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 0;
-  color: #999999; }
-
-.help-inline {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: baseline;
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  margin-bottom: 9px;
-  vertical-align: middle;
-  padding-left: 5px; }
-
-.input-prepend,
-.input-append {
-  margin-bottom: 5px;
-  zoom: 1; }
-  .input-prepend:before, .input-prepend:after,
-  .input-append:before,
-  .input-append:after {
-    content: "";
-    display: table; }
-  .input-prepend:after,
-  .input-append:after {
-    clear: both; }
-  .input-prepend input,
-  .input-prepend .uneditable-input,
-  .input-append input,
-  .input-append .uneditable-input {
-    -webkit-border-radius: 0 3px 3px 0;
-    -moz-border-radius: 0 3px 3px 0;
-    -ms-border-radius: 0 3px 3px 0;
-    -o-border-radius: 0 3px 3px 0;
-    border-radius: 0 3px 3px 0; }
-    .input-prepend input:focus,
-    .input-prepend .uneditable-input:focus,
-    .input-append input:focus,
-    .input-append .uneditable-input:focus {
-      position: relative;
-      z-index: 2; }
-  .input-prepend .uneditable-input,
-  .input-append .uneditable-input {
-    border-left-color: #eeeeee; }
-  .input-prepend .add-on,
-  .input-append .add-on {
-    float: left;
-    display: block;
-    width: auto;
-    min-width: 16px;
-    height: 18px;
-    margin-right: -1px;
-    padding: 4px 5px;
-    font-weight: normal;
-    line-height: 18px;
-    color: #999999;
-    text-align: center;
-    text-shadow: 0 1px 0 white;
-    background-color: #f5f5f5;
-    border: 1px solid #eeeeee;
-    -webkit-border-radius: 3px 0 0 3px;
-    -moz-border-radius: 3px 0 0 3px;
-    -ms-border-radius: 3px 0 0 3px;
-    -o-border-radius: 3px 0 0 3px;
-    border-radius: 3px 0 0 3px; }
-  .input-prepend .active,
-  .input-append .active {
-    background-color: #a9dba9;
-    border-color: #46a546; }
-
-.input-prepend .add-on {
-  *margin-top: 1px;
-  /* IE6-7 */ }
-
-.input-append input,
-.input-append .uneditable-input {
-  float: left;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -ms-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px; }
-.input-append .uneditable-input {
-  border-left-color: #eeeeee;
-  border-right-color: #eeeeee; }
-.input-append .add-on {
-  margin-right: 0;
-  margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0; }
-.input-append input:first-child {
-  *margin-left: -160px; }
-  .input-append input:first-child + .add-on {
-    *margin-left: -21px; }
 
 .search-query {
   padding-left: 14px;
