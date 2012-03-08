@@ -312,7 +312,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 27px;
+  margin-bottom: 18px;
   font-size: 18px;
   line-height: 36px;
   color: #333333;
@@ -355,9 +355,8 @@ select,
   font-size: 12px;
   height: 18px;
   line-height: 18px;
-  margin-bottom: 9px;
-  padding: 4px;
-  width: 300px; }
+  margin-bottom: 18px;
+  padding: 4px; }
 
 .uneditable-textarea {
   height: auto;
@@ -564,6 +563,63 @@ form {
   margin: 0 auto 24px auto;
   padding: 6px 20px 20px 20px;
   width: 400px; }
+
+input,
+textarea,
+select,
+.uneditable-input {
+  width: 62%; }
+
+label {
+  height: 20px;
+  line-height: 20px;
+  margin: 0; }
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0; }
+
+li {
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+.error {
+  background: #333333;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: white;
+  display: block;
+  font-size: 12px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 1px 0 black;
+  top: 20px;
+  width: 30%; }
+  .error::before {
+    content: "";
+    background: #333333;
+    display: block;
+    height: 8px;
+    left: -4px;
+    position: absolute;
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    width: 8px; }
 
 button {
   background-color: #0064cd;

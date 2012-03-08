@@ -19,16 +19,26 @@
 </head>
 <body>
 
-  <form class="sign-in">
+  <form class="sign-in-form" method="post" action="http://url.to.post/">
     <legend>Sign In</legend>
-    <label>Email Address</label>
-    <input type="text" placeholder="ex: steve@steve.com">
-    <label>Password</label>
-    <input type="password">
-    <label class="checkbox"><input type="checkbox">Remember me on this computer</label>
-    <div class="form-actions">
-      <button type="submit" class="btn">Sign In</button>
-    </div>
+    <ul>
+      <li class="email-address">
+        <label for="emailAddress">Email Address</label>
+        <input name="emailAddress" type="text" placeholder="ex: steve@steve.com" />
+        <span class="error">Must enter a valid email address</span>
+      </li>
+      <li class="password">
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <span class="error">Password does not match email address</span>
+      </li>
+      <li class="remember">
+        <label for="remember" class="checkbox"><input name="remember" type="checkbox" />Remember me on this computer</label>
+      </li>
+      <li class="form-actions">
+        <button name="signIn" type="submit">Sign In</button>
+      </li>
+    </ul>
   </form><!-- end of form.sign-in -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

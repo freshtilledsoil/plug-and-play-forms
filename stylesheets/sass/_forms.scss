@@ -21,7 +21,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: $lineHeight * 1.5;
+  margin-bottom: $lineHeight;
   font-size: $baseFontSize * 1.5;
   line-height: $lineHeight * 2;
   color: $grayDark;
@@ -60,9 +60,8 @@ select,
   font-size: $baseFontSize;
   height: $lineHeight;
   line-height: $lineHeight;
-  margin-bottom: 9px;
+  margin-bottom: $lineHeight;
   padding: 4px;
-  width: 300px;
 }
 .uneditable-textarea {
   height: auto;
