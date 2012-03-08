@@ -90,16 +90,18 @@ label select {
   display: block;
 }
 
-ul {
-  margin: 0;
-  list-style-type: none;
-  padding: 0;
-}
+form {
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  margin: 0;
-  padding: 0;
-  position: relative;
+  li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 }
 
 .error {
