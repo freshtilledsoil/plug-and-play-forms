@@ -505,10 +505,19 @@ form {
   padding: 6px 20px 20px 20px;
   width: 400px; }
 
+button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px; }
+
 fieldset {
   padding: 0;
-  margin: 0;
+  margin: 0 0 18px 0;
   border: 0; }
+
+fieldset.last {
+  margin-bottom: 0; }
 
 legend {
   display: block;
@@ -563,6 +572,9 @@ select,
   padding: 4px;
   width: 62%; }
 
+select {
+  height: 28px; }
+
 .uneditable-textarea {
   height: auto;
   width: auto; }
@@ -573,9 +585,15 @@ label select {
   display: block; }
 
 form ul {
+  zoom: 1;
   margin: 0;
   list-style-type: none;
   padding: 0; }
+  form ul:before, form ul:after {
+    content: "";
+    display: table; }
+  form ul:after {
+    clear: both; }
 form li {
   margin: 0;
   padding: 0;
@@ -595,7 +613,7 @@ form li {
   position: absolute;
   right: 0;
   text-shadow: 0 1px 0 black;
-  top: 20px;
+  top: 18px;
   width: 30%; }
   .error::before {
     content: "";
@@ -689,3 +707,25 @@ button {
 /* ==========================================================================
 Styles specific to individual forms
 ========================================================================== */
+form.credit-card-payment-form li.name-on-card input,
+form.credit-card-payment-form li.street-address input,
+form.credit-card-payment-form li.street-address-two input {
+  width: 300px; }
+form.credit-card-payment-form li.city,
+form.credit-card-payment-form li.state,
+form.credit-card-payment-form li.zip {
+  float: left;
+  margin-right: 10px; }
+form.credit-card-payment-form li.city {
+  width: 150px; }
+  form.credit-card-payment-form li.city input {
+    width: 140px; }
+form.credit-card-payment-form li.state {
+  width: 60px; }
+  form.credit-card-payment-form li.state input {
+    width: 50px; }
+form.credit-card-payment-form li.zip {
+  margin-right: 0;
+  width: 80px; }
+  form.credit-card-payment-form li.zip input {
+    width: 70px; }

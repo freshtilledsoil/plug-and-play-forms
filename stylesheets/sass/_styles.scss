@@ -26,10 +26,21 @@ form {
   width: 400px;
 }
 
+button {
+  font-family: $textFontFamily;
+  font-size: $baseFontSize;
+  font-weight: normal;
+  line-height: $lineHeight;
+}
+
 fieldset {
   padding: 0;
-  margin: 0;
+  margin: 0 0 $lineHeight 0;
   border: 0;
+}
+
+fieldset.last {
+  margin-bottom: 0;
 }
 
 legend {
@@ -79,6 +90,11 @@ select,
   padding: 4px;
   width: 62%;
 }
+
+select {
+  height: $lineHeight+10;
+}
+
 .uneditable-textarea {
   height: auto;
   width: auto;
@@ -92,6 +108,7 @@ label select {
 
 form {
   ul {
+    @include clearfix;
     margin: 0;
     list-style-type: none;
     padding: 0;
@@ -114,7 +131,7 @@ form {
   position: absolute;
   right: 0;
   text-shadow: 0 1px 0 $black;
-  top: 20px;
+  top: $lineHeight;
   width: 30%;
 
   &::before {
@@ -124,7 +141,7 @@ form {
     height: 8px;
     left: -4px;
     position: absolute;
-    top: 11px;
+    top: ($lineHeight/2) + (2);
     @include transform(rotate(45deg));
     @include transform-origin(center center);
     width: 8px;
@@ -139,3 +156,45 @@ button {
 /* ==========================================================================
 Styles specific to individual forms
 ========================================================================== */
+
+// Credit Card forms ==================== //
+form.credit-card-payment-form {
+
+  li.name-on-card input,
+  li.street-address input,
+  li.street-address-two input {
+    width: 300px;
+  }
+
+  li.city,
+  li.state,
+  li.zip {
+    float: left;
+    margin-right: 10px;
+  }
+
+  li.city {
+    width: 150px;
+
+    input {
+      width: 140px;
+    }
+  }
+
+  li.state {
+    width: 60px;
+
+    input {
+      width: 50px;
+    }
+  }
+
+  li.zip {
+    margin-right: 0;
+    width: 80px;
+
+    input {
+      width: 70px;
+    }
+  }
+}
