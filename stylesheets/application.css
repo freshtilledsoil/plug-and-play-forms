@@ -300,73 +300,6 @@ pre {
 Forms adapted from Twitter Bootstrap
 https://github.com/twitter/bootstrap/
 ========================================================================== */
-form {
-  margin: 0 0 18px; }
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0; }
-
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 18px;
-  font-size: 18px;
-  line-height: 36px;
-  color: #333333;
-  border: 0;
-  border-bottom: 1px solid #eeeeee; }
-
-label,
-input,
-button,
-select,
-textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 18px; }
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333333; }
-
-input,
-textarea,
-select,
-.uneditable-input {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #999999;
-  color: #555555;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: baseline;
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  font-size: 12px;
-  height: 18px;
-  line-height: 18px;
-  margin-bottom: 18px;
-  padding: 4px; }
-
-.uneditable-textarea {
-  height: auto;
-  width: auto; }
-
-label input,
-label textarea,
-label select {
-  display: block; }
-
 input[type="image"],
 input[type="checkbox"],
 input[type="radio"] {
@@ -543,11 +476,14 @@ textarea[readonly] {
   border-radius: 14px; }
 
 /* ==========================================================================
-Global styles
+Demo Specific Styles
 ========================================================================== */
 body {
   padding: 60px 0 120px 0; }
 
+/* ==========================================================================
+Base Styles for all forms, modified Twitter Bootstrap
+========================================================================== */
 form {
   background: #f5f5f5;
   border: 1px solid #555555;
@@ -560,20 +496,78 @@ form {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  margin: 0 auto 24px auto;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  margin: 0 auto 18px auto;
   padding: 6px 20px 20px 20px;
   width: 400px; }
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 36px;
+  border: 0;
+  border-bottom: 1px solid #eeeeee; }
+
+fieldset legend {
+  border: 0;
+  font-size: 14.4px;
+  font-weight: bold;
+  line-height: 21.6px;
+  margin: 0;
+  padding-bottom: 6px; }
+
+label {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  color: #333333; }
 
 input,
 textarea,
 select,
 .uneditable-input {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #999999;
+  color: #555555;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 18px;
+  padding: 4px;
   width: 62%; }
 
-label {
-  height: 20px;
-  line-height: 20px;
-  margin: 0; }
+.uneditable-textarea {
+  height: auto;
+  width: auto; }
+
+label input,
+label textarea,
+label select {
+  display: block; }
 
 ul {
   margin: 0;
@@ -689,3 +683,7 @@ button {
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     outline: 0; }
+
+/* ==========================================================================
+Styles specific to individual forms
+========================================================================== */

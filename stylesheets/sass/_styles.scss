@@ -1,10 +1,14 @@
 /* ==========================================================================
-Global styles
+Demo Specific Styles
 ========================================================================== */
 
 body {
   padding: 60px 0 120px 0;
 }
+
+/* ==========================================================================
+Base Styles for all forms, modified Twitter Bootstrap
+========================================================================== */
 
 form {
   background: $grayLightest;
@@ -12,22 +16,74 @@ form {
   border: 1px solid rgba($black, 0.05);
   @include border-radius(4px);
   @include box-shadow(inset 0 1px 1px rgba($black, 0.05));
-  margin: 0 auto 24px auto;
+  color: $grayDark;
+  font-family: $textFontFamily;
+  font-size: $baseFontSize;
+  font-weight: normal;
+  line-height: $lineHeight;
+  margin: 0 auto $lineHeight auto;
   padding: 6px 20px 20px 20px;
   width: 400px;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $lineHeight;
+  font-size: $baseFontSize*1.5;
+  line-height: $lineHeight*2;
+  border: 0;
+  border-bottom: 1px solid $grayLighter;
+}
+
+fieldset legend {
+  border: 0;
+  font-size: $baseFontSize*1.2;
+  font-weight: bold;
+  line-height: $lineHeight*1.2;
+  margin: 0;
+  padding-bottom: $lineHeight/3;
+}
+
+label {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  color: $grayDark;
 }
 
 input,
 textarea,
 select,
 .uneditable-input {
+  @include border-radius(3px);
+  border: 1px solid $grayLight;
+  color: $gray;
+  @include inline-block;
+  font-size: $baseFontSize;
+  height: $lineHeight;
+  line-height: $lineHeight;
+  margin-bottom: $lineHeight;
+  padding: 4px;
   width: 62%;
 }
+.uneditable-textarea {
+  height: auto;
+  width: auto;
+}
 
-label {
-  height: 20px;
-  line-height: 20px;
-  margin: 0;
+label input,
+label textarea,
+label select {
+  display: block;
 }
 
 ul {
@@ -73,3 +129,7 @@ button {
   @include bootstrap-button($blueDark, $white);
   font-weight: bold;
 }
+
+/* ==========================================================================
+Styles specific to individual forms
+========================================================================== */

@@ -99,6 +99,51 @@
     </ul>
   </form>
 
+  <form class="credit-card-payement-form" method="post" action="http://url.to.post/">
+    <legend>Credit Card Payment</legend>
+    <fieldset class="shipping-address">
+      <legend>Shipping Info</legend>
+      <ul>
+        <li class="name-on-card">
+          <label for="nameOnCard">Name on card</label>
+          <input name="nameOnCard" type="text" placeholder="ex: Peter C Venkman" />
+        </li>
+        <li class="street-address">
+          <label for="streetAddress">Street Address</label>
+          <input name="streetAddress" type="text" placeholder="ex: 123 Main Street" />
+        </li>
+        <li class="apartment-suite-unit">
+          <label for="apartmentSuiteUnit">Apartment, suite, unit, etc...</label>
+          <input name="apartmentSuiteUnit" type="text" placeholder="ex: Apt. 10" />
+        </li>
+        <li class="town-or-city">
+          <label for="townOrCity">Town or city</label>
+          <input name="townOrCity" type="text" placeholder="ex: Boston" />
+        </li>
+        <li class="state-or-province">
+          <label for="stateOrProvince">State or province</label>
+          <input name="stateOrProvince" type="text" placeholder="ex: Massachusetts" />
+        </li>
+        <li class="postal-code">
+          <label for="postalCode">Postal Code</label>
+          <input name="postalCode" type="text" placeholder="ex: 02108" />
+        </li>
+        <li class="country">
+          <label for="country">Country</label>
+          <input name="country" type="text" placeholder="ex: United States of America" />
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="billing-info">
+      <legend>Billing Info</legend>
+    </fieldset>
+    <ul>
+      <li class="form-actions">
+        <button name="signUp" type="submit">Sign Up</button>
+      </li>
+    </ul>
+  </form>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.1.min.js"><\/script>')</script>
 <script src="javascripts/plugins.js"></script>
