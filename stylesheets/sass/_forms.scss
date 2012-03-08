@@ -3,8 +3,7 @@ Forms adapted from Twitter Bootstrap
 https://github.com/twitter/bootstrap/
 ========================================================================== */
 
-// GENERAL STYLES
-// --------------
+// General Styles ======================================================== //
 
 // Make all forms have space below them
 form {
@@ -28,12 +27,6 @@ legend {
   color: $grayDark;
   border: 0;
   border-bottom: 1px solid $grayLighter;
-
-  // Small
-  small {
-    font-size: $lineHeight * .75;
-    color: $grayLight;
-  }
 }
 
 // Set font for forms
@@ -42,15 +35,10 @@ input,
 button,
 select,
 textarea {
+  font-family: $textFontFamily;
   font-size: $baseFontSize;
   font-weight: normal;
   line-height: $lineHeight;
-}
-input,
-button,
-select,
-textarea {
-  font-family: $textFontFamily;
 }
 
 // Identify controls by their labels
@@ -65,7 +53,8 @@ input,
 textarea,
 select,
 .uneditable-input {
-  @include inline-block();
+  display: inline-block;
+  width: 210px;
   height: $lineHeight;
   padding: 4px;
   margin-bottom: 9px;
@@ -139,6 +128,7 @@ input[type="file"] {
 
 // Chrome on Linux and Mobile Safari need background-color
 select {
+  width: 220px; // default input width + 10px of padding that doesn't get applied
   background-color: $white;
 }
 
@@ -165,8 +155,42 @@ input[type="hidden"] {
 
 
 
-// FOCUS STATE
-// -----------
+// Checkboxes & Radios ======================================================== //
+
+// Indent the labels to position radios/checkboxes as hanging
+.radio,
+.checkbox {
+  padding-left: 18px;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+
+// Move the options list down to align with labels
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px; // has to be padding because margin collapses
+}
+
+// Radios and checkboxes on same line
+// TODO v3: Convert .inline to .control-inline
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px; // space out consecutive inline controls
+}
+
+
+
+// Focus State ======================================================== //
 
 input,
 textarea {
@@ -175,8 +199,8 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border-color: rgba($blue, 0.8);
-  @include box-shadow(inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($blue, 0.6));
+  border-color: rgba($blueFocus, 0.8);
+  @include box-shadow(inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($blueFocus, 0.6));
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
 }
@@ -185,14 +209,34 @@ input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
   @include box-shadow(none); // override for file inputs
-  outline: thin dotted #333;
+  outline: thin dotted $grayDark;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
 
-// DISABLED STATE
-// --------------
+
+// Input Sizes ======================================================== //
+
+// General classes for quick sizes
+.input-mini       { width: 60px; }
+.input-small      { width: 90px; }
+.input-medium     { width: 150px; }
+.input-large      { width: 210px; }
+.input-xlarge     { width: 270px; }
+.input-xxlarge    { width: 530px; }
+
+// Grid style input sizes
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input {
+  float: none;
+  margin-left: 0;
+}
+
+
+// Disabled State ======================================================== //
 
 // Disabled and read-only inputs
 input[disabled],
@@ -207,14 +251,123 @@ textarea[readonly] {
 }
 
 
-// HTML5 invalid states
-input:focus:required:invalid,
-textarea:focus:required:invalid,
-select:focus:required:invalid {
-  color: $red;
-  border-color: lighten($red, 15%);
-  &:focus {
-    border-color: $red;
-    @include box-shadow(0 0 6px lighten($red, 50%));
+// Form Actions ======================================================== //
+
+.form-actions {
+  padding: ($lineHeight - 1) 20px $lineHeight;
+  margin-top: $lineHeight;
+  margin-bottom: $lineHeight;
+  background-color: $grayLightest;
+  border-top: 1px solid $grayLighter;
+}
+
+// For text that needs to appear as an input but should not be an input
+.uneditable-input {
+  display: block;
+  background-color: $white;
+  border-color: $grayLighter;
+  @include box-shadow(inset 0 1px 2px rgba($black, 0.025));
+  cursor: not-allowed;
+}
+
+
+// Help Text ======================================================== //
+
+.help-block {
+  display: block; // account for any element using help-block
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: $grayLight;
+}
+
+.help-inline {
+  @include inline-block;
+  margin-bottom: 9px;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+
+
+// Input Groups ======================================================== //
+
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-prepend,
+.input-append {
+  margin-bottom: 5px;
+  @include clearfix;
+
+  input,
+  .uneditable-input {
+    @include border-radius(0 3px 3px 0);
+    &:focus {
+      position: relative;
+      z-index: 2;
+    }
   }
+  .uneditable-input {
+    border-left-color: $grayLighter;
+  }
+  .add-on {
+    float: left;
+    display: block;
+    width: auto;
+    min-width: 16px;
+    height: $lineHeight;
+    margin-right: -1px;
+    padding: 4px 5px;
+    font-weight: normal;
+    line-height: $lineHeight;
+    color: $grayLight;
+    text-align: center;
+    text-shadow: 0 1px 0 $white;
+    background-color: $grayLightest;
+    border: 1px solid $grayLighter;
+    @include border-radius(3px 0 0 3px);
+  }
+  .active {
+    background-color: lighten($green, 30%);
+    border-color: $green;
+  }
+}
+.input-prepend {
+  .add-on {
+    *margin-top: 1px; /* IE6-7 */
+  }
+}
+.input-append {
+  input,
+  .uneditable-input {
+    float: left;
+    @include border-radius(3px 0 0 3px);
+  }
+  .uneditable-input {
+    border-left-color: $grayLighter;
+    border-right-color: $grayLighter;
+  }
+  .add-on {
+    margin-right: 0;
+    margin-left: -1px;
+    @include border-radius(0 3px 3px 0);
+  }
+  input:first-child {
+    // In IE7, having a hasLayout container (from clearfix's zoom:1) can make the first input
+    // inherit the sum of its ancestors' margins.
+    *margin-left: -160px;
+
+    &+.add-on {
+      *margin-left: -21px;
+    }
+  }
+}
+
+
+
+// Search Form ======================================================== //
+
+.search-query {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0; // remove the default margin on all inputs
+  @include border-radius(14px);
 }

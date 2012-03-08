@@ -1,17 +1,18 @@
 /* ==========================================================================
-Major section comment type. These will output to .css file when compiled
+Global styles
 ========================================================================== */
 
+body {
+  padding-top: 60px;
+}
 
-
-
-// Minor section comment type. Will not output to .css file ============== //
-
-
-
-
-// Inline comment. Will not output to .css file
-
-
-
-
+form {
+  background: $grayLightest;
+  border: 1px solid $gray;
+  border: 1px solid rgba($black, 0.05);
+  @include border-radius(4px);
+  @include box-shadow(inset 0 1px 1px rgba($black, 0.05));
+  margin: 0 auto 24px auto;
+  padding: 20px;
+  width: 400px;
+}
