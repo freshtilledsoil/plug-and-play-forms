@@ -24,7 +24,7 @@
     <ul>
       <li class="email-address">
         <label for="emailAddress">Email Address</label>
-        <input name="emailAddress" type="text" placeholder="ex: steve@steve.com" />
+        <input name="emailAddress" type="text" placeholder="ex: ray@ghostbusters.com" />
         <span class="error">Must enter a valid email address</span>
       </li>
       <li class="password">
@@ -46,7 +46,41 @@
     <ul>
       <li class="email-address">
         <label for="emailAddress">Email Address</label>
-        <input name="emailAddress" type="text" placeholder="ex: steve@steve.com" />
+        <input name="emailAddress" type="text" placeholder="ex: egon@ghostbusters.com" />
+        <span class="error">That address is already registered</span>
+      </li>
+      <li class="create-password">
+        <label for="createPassword">Create Password</label>
+        <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
+        <span class="error">Password must be at least 8 characters</span>
+      </li>
+      <li class="confirm-password">
+        <label for="confirmPassword">Confirm Password</label>
+        <input name="confirmPassword" type="password" placeholder="Must match password field" />
+        <span class="error">Must match password</span>
+      </li>
+      <li class="form-actions">
+        <button name="signUp" type="submit">Sign Up</button>
+      </li>
+    </ul>
+  </form>
+
+  <form class="complex-sign-up-form" method="post" action="http://url.to.post/">
+    <legend>Complex Sign Up</legend>
+    <ul>
+      <li class="full-name">
+        <label for="fullName">Full Name</label>
+        <input name="fullName" type="text" placeholder="ex: Peter Venkman" />
+        <span class="error">Must include first and last name</span>
+      </li>
+      <li class="username">
+        <label for="username">Username</label>
+        <input name="username" type="text" placeholder="ex: GhostBuster99" />
+        <span class="error">Must have no more than 16 characters</span>
+      </li>
+      <li class="email-address">
+        <label for="emailAddress">Email Address</label>
+        <input name="emailAddress" type="text" placeholder="ex: venkman@ghostbusters.com" />
         <span class="error">That address is already registered</span>
       </li>
       <li class="create-password">
