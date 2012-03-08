@@ -39,7 +39,31 @@
         <button name="signIn" type="submit">Sign In</button>
       </li>
     </ul>
-  </form><!-- end of form.sign-in -->
+  </form>
+
+  <form class="basic-sign-up-form" method="post" action="http://url.to.post/">
+    <legend>Basic Sign Up</legend>
+    <ul>
+      <li class="email-address">
+        <label for="emailAddress">Email Address</label>
+        <input name="emailAddress" type="text" placeholder="ex: steve@steve.com" />
+        <span class="error">That address is already registered</span>
+      </li>
+      <li class="create-password">
+        <label for="createPassword">Create Password</label>
+        <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
+        <span class="error">Password must be at least 8 characters</span>
+      </li>
+      <li class="confirm-password">
+        <label for="confirmPassword">Confirm Password</label>
+        <input name="confirmPassword" type="password" placeholder="Must match password field" />
+        <span class="error">Must match password</span>
+      </li>
+      <li class="form-actions">
+        <button name="signUp" type="submit">Sign Up</button>
+      </li>
+    </ul>
+  </form>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.1.min.js"><\/script>')</script>
