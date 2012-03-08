@@ -530,10 +530,13 @@ fieldset legend {
 
 label {
   display: block;
-  height: 20px;
-  line-height: 20px;
+  height: 18px;
+  line-height: 18px;
   margin: 0;
   color: #333333; }
+
+label.checkbox {
+  margin-bottom: 18px; }
 
 input,
 textarea,

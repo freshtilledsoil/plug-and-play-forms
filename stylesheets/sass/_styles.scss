@@ -54,10 +54,14 @@ fieldset legend {
 
 label {
   display: block;
-  height: 20px;
-  line-height: 20px;
+  height: $lineHeight;
+  line-height: $lineHeight;
   margin: 0;
   color: $grayDark;
+}
+
+label.checkbox {
+  margin-bottom: $lineHeight;
 }
 
 input,
