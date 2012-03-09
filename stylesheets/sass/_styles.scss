@@ -11,16 +11,29 @@ div.basic-sign-up-wrap,
 div.complex-sign-up-wrap,
 div.credit-card-payment-wrap {
   margin: 0 auto $lineHeight auto;
-  width: 1042px;
+  width: 982px; // width of form element area, plus 20px padding and 1px border per side
 }
 
 /* ==========================================================================
-Form specific grid
+Form specific grid - 12 columns
 ========================================================================== */
-form {
-  $gw-column: 40px;
-  $gw-gutter: 10px;
-}
+$column: 60px;
+$gutter: 20px;
+
+$extra: 10px; // subtract this to account for padding and borders
+
+$span1: $column;
+$span2: ($column*2) + ($gutter);
+$span3: ($column*3) + ($gutter*2);
+$span4: ($column*4) + ($gutter*3);
+$span5: ($column*5) + ($gutter*4);
+$span6: ($column*6) + ($gutter*5);
+$span7: ($column*7) + ($gutter*6);
+$span8: ($column*8) + ($gutter*7);
+$span9: ($column*9) + ($gutter*8);
+$span10: ($column*10) + ($gutter*9);
+$span11: ($column*11) + ($gutter*10);
+$span12: ($column*12) + ($gutter*11);
 
 
 /* ==========================================================================
@@ -101,7 +114,7 @@ select,
   line-height: $lineHeight;
   margin-bottom: $lineHeight;
   padding: 4px;
-  width: 62%;
+  width: $span8 - $extra;
 }
 
 select {
@@ -140,12 +153,12 @@ form {
   color: $white;
   display: block;
   font-size: 12px;
-  padding: 6px;
+  padding: 5px;
   position: absolute;
   right: 0;
   text-shadow: 0 1px 0 $black;
   top: $lineHeight;
-  width: 30%;
+  width: $span4 - $extra;
 
   &::before {
     content: "";
@@ -177,41 +190,36 @@ Styles specific to individual forms
 // Credit Card forms ===================================================== //
 form.credit-card-payment-form {
 
-  li.name-on-card input,
-  li.street-address input,
-  li.street-address-two input {
-    width: 300px;
-  }
-
   li.city,
   li.state,
   li.zip {
     float: left;
-    margin-right: 10px;
+    margin-right: $gutter;
   }
 
   li.city {
-    width: 150px;
+    width: $span5;
 
     input {
-      width: 140px;
+      width: $span5 - $extra;
     }
   }
 
   li.state {
-    width: 60px;
+    width: $span1;
 
     input {
-      width: 50px;
+      width: $span1 - $extra;
     }
   }
 
   li.zip {
     margin-right: 0;
-    width: 80px;
+    width: $span2;
 
     input {
-      width: 70px;
+      width: $span2 - $extra;
     }
   }
 }
+

@@ -314,10 +314,10 @@ div.basic-sign-up-wrap,
 div.complex-sign-up-wrap,
 div.credit-card-payment-wrap {
   margin: 0 auto 18px auto;
-  width: 1042px; }
+  width: 982px; }
 
 /* ==========================================================================
-Form specific grid
+Form specific grid - 12 columns
 ========================================================================== */
 /* ==========================================================================
 Base Styles for all forms, modified Twitter Bootstrap
@@ -404,7 +404,7 @@ select,
   line-height: 18px;
   margin-bottom: 18px;
   padding: 4px;
-  width: 62%; }
+  width: 610px; }
 
 select {
   height: 28px; }
@@ -443,12 +443,12 @@ form li {
   color: white;
   display: block;
   font-size: 12px;
-  padding: 6px;
+  padding: 5px;
   position: absolute;
   right: 0;
   text-shadow: 0 1px 0 black;
   top: 18px;
-  width: 30%; }
+  width: 290px; }
   .error::before {
     content: "";
     background: #333333;
@@ -544,25 +544,21 @@ button {
 /* ==========================================================================
 Styles specific to individual forms
 ========================================================================== */
-form.credit-card-payment-form li.name-on-card input,
-form.credit-card-payment-form li.street-address input,
-form.credit-card-payment-form li.street-address-two input {
-  width: 300px; }
 form.credit-card-payment-form li.city,
 form.credit-card-payment-form li.state,
 form.credit-card-payment-form li.zip {
   float: left;
-  margin-right: 10px; }
+  margin-right: 20px; }
 form.credit-card-payment-form li.city {
-  width: 150px; }
+  width: 380px; }
   form.credit-card-payment-form li.city input {
-    width: 140px; }
+    width: 370px; }
 form.credit-card-payment-form li.state {
   width: 60px; }
   form.credit-card-payment-form li.state input {
     width: 50px; }
 form.credit-card-payment-form li.zip {
   margin-right: 0;
-  width: 80px; }
+  width: 140px; }
   form.credit-card-payment-form li.zip input {
-    width: 70px; }
+    width: 130px; }
