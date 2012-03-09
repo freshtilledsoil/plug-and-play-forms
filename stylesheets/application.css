@@ -125,178 +125,6 @@ textarea {
   vertical-align: top; }
 
 /* ==========================================================================
-Typography adapted from Twitter Bootstrap
-https://github.com/twitter/bootstrap/
-========================================================================== */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-p {
-  margin: 0 0 9px;
-  font-size: 12px;
-  line-height: 18px; }
-  p small {
-    font-size: 10px;
-    color: black; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: bold;
-  color: black;
-  text-rendering: optimizelegibility; }
-  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    font-weight: normal;
-    color: #1a1a1a; }
-
-h1 {
-  font-size: 30px;
-  line-height: 36px; }
-  h1 small {
-    font-size: 18px; }
-
-h2 {
-  font-size: 24px;
-  line-height: 36px; }
-  h2 small {
-    font-size: 18px; }
-
-h3 {
-  line-height: 27px;
-  font-size: 18px; }
-  h3 small {
-    font-size: 14px; }
-
-h4, h5, h6 {
-  line-height: 18px; }
-
-h4 {
-  font-size: 14px; }
-  h4 small {
-    font-size: 12px; }
-
-h5 {
-  font-size: 12px; }
-
-h6 {
-  font-size: 11px;
-  color: #1a1a1a;
-  text-transform: uppercase; }
-
-ul, ol {
-  padding: 0;
-  margin: 0 0 9px 25px; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li {
-  line-height: 18px; }
-
-ul.unstyled,
-ol.unstyled {
-  margin-left: 0;
-  list-style: none; }
-
-dl {
-  margin-bottom: 18px; }
-
-dt,
-dd {
-  line-height: 18px; }
-
-dt {
-  font-weight: bold; }
-
-dd {
-  margin-left: 9px; }
-
-hr {
-  margin: 18px 0;
-  border: 0;
-  border-top: 1px solid #555555;
-  border-bottom: 1px solid white; }
-
-strong {
-  font-weight: bold; }
-
-em {
-  font-style: italic; }
-
-abbr {
-  font-size: 90%;
-  text-transform: uppercase; }
-
-blockquote {
-  padding: 0 0 0 15px;
-  margin: 0 0 18px;
-  border-left: 5px solid #eeeeee; }
-  blockquote p {
-    margin-bottom: 0; }
-  blockquote small {
-    display: block;
-    line-height: 18px;
-    color: #999999; }
-    blockquote small:before {
-      content: '\2014 \00A0'; }
-
-code,
-pre {
-  padding: 0 3px 2px;
-  font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 11px;
-  color: #333333;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px; }
-
-code {
-  padding: 3px 4px;
-  color: #9d261d;
-  background-color: #f5f5f5;
-  border: 1px solid #999999; }
-
-pre {
-  display: block;
-  padding: 8.5px;
-  margin: 0 0 9px;
-  font-size: 12px;
-  line-height: 18px;
-  background-color: #f5f5f5;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word; }
-  pre.prettyprint {
-    margin-bottom: 18px; }
-  pre code {
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
-    border: 0; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
-
-/* ==========================================================================
 Forms adapted from Twitter Bootstrap
 https://github.com/twitter/bootstrap/
 ========================================================================== */
@@ -489,6 +317,9 @@ div.credit-card-payment-wrap {
   width: 600px; }
 
 /* ==========================================================================
+Form specific grid
+========================================================================== */
+/* ==========================================================================
 Base Styles for all forms, modified Twitter Bootstrap
 ========================================================================== */
 form {
@@ -526,6 +357,7 @@ fieldset.last {
 legend {
   border: 0;
   display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 36px;
   margin: 6px 20px 18px 20px;

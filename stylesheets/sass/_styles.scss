@@ -15,6 +15,15 @@ div.credit-card-payment-wrap {
 }
 
 /* ==========================================================================
+Form specific grid
+========================================================================== */
+form {
+  $gw-column: 40px;
+  $gw-gutter: 10px;
+}
+
+
+/* ==========================================================================
 Base Styles for all forms, modified Twitter Bootstrap
 ========================================================================== */
 
@@ -51,6 +60,7 @@ fieldset.last {
 legend {
   border: 0;
   display: block;
+  font-family: $headerFontFamily;
   font-size: $baseFontSize*1.5;
   line-height: $lineHeight*2;
   margin: 6px 20px $lineHeight 20px;
@@ -164,7 +174,7 @@ button {
 Styles specific to individual forms
 ========================================================================== */
 
-// Credit Card forms ==================== //
+// Credit Card forms ===================================================== //
 form.credit-card-payment-form {
 
   li.name-on-card input,
