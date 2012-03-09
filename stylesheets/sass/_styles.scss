@@ -6,6 +6,14 @@ body {
   padding: 60px 0 120px 0;
 }
 
+div.sign-in-wrap,
+div.basic-sign-up-wrap,
+div.complex-sign-up-wrap,
+div.credit-card-payment-wrap {
+  margin: 0 auto $lineHeight auto;
+  width: 600px;
+}
+
 /* ==========================================================================
 Base Styles for all forms, modified Twitter Bootstrap
 ========================================================================== */
@@ -21,9 +29,6 @@ form {
   font-size: $baseFontSize;
   font-weight: normal;
   line-height: $lineHeight;
-  margin: 0 auto $lineHeight auto;
-  padding: 6px 20px 20px 20px;
-  width: 400px;
 }
 
 button {
@@ -35,7 +40,7 @@ button {
 
 fieldset {
   padding: 0;
-  margin: 0 0 $lineHeight 0;
+  margin: 0 20px $lineHeight 20px;
   border: 0;
 }
 
@@ -44,14 +49,12 @@ fieldset.last {
 }
 
 legend {
+  border: 0;
   display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: $lineHeight;
   font-size: $baseFontSize*1.5;
   line-height: $lineHeight*2;
-  border: 0;
-  border-bottom: 1px solid $grayLighter;
+  margin: 6px 20px $lineHeight 20px;
+  padding: 0;
 }
 
 fieldset legend {
@@ -146,6 +149,10 @@ form {
     @include transform-origin(center center);
     width: 8px;
   }
+}
+
+div.form-actions {
+  margin: 0 20px $lineHeight 20px;
 }
 
 button {

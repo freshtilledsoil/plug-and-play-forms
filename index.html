@@ -19,159 +19,167 @@
 </head>
 <body>
 
-  <form class="sign-in-form" method="post" action="http://url.to.post/">
-    <legend>Sign In</legend>
-    <ul>
-      <li class="email-address">
-        <label for="emailAddress">Email Address</label>
-        <input name="emailAddress" type="text" placeholder="ex: ray@ghostbusters.com" />
-        <span class="error">Must enter a valid email address</span>
-      </li>
-      <li class="password">
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <span class="error">Password does not match email address</span>
-      </li>
-      <li class="remember">
-        <label for="remember" class="checkbox"><input name="remember" type="checkbox" />Remember me on this computer</label>
-      </li>
-      <li class="form-actions">
+  <div class="sign-in-wrap">
+    <form class="sign-in-form" method="post" action="http://url.to.post/">
+      <legend>Sign In</legend>
+      <fieldset>
+        <ul>
+          <li class="email-address">
+            <label for="emailAddress">Email Address</label>
+            <input name="emailAddress" type="text" placeholder="ex: ray@ghostbusters.com" />
+            <span class="error">Must enter a valid email address</span>
+          </li>
+          <li class="password">
+            <label for="password">Password</label>
+            <input name="password" type="password" />
+            <span class="error">Password does not match email address</span>
+          </li>
+          <li class="remember">
+            <label for="remember" class="checkbox"><input name="remember" type="checkbox" />Remember me on this computer</label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="form-actions">
         <button name="signIn" type="submit">Sign In</button>
-      </li>
-    </ul>
-  </form>
+      </div>
+    </form>
+  </div>
 
-  <form class="basic-sign-up-form" method="post" action="http://url.to.post/">
-    <legend>Basic Sign Up</legend>
-    <ul>
-      <li class="email-address">
-        <label for="emailAddress">Email Address</label>
-        <input name="emailAddress" type="text" placeholder="ex: egon@ghostbusters.com" />
-        <span class="error">That address is already registered</span>
-      </li>
-      <li class="create-password">
-        <label for="createPassword">Create Password</label>
-        <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
-        <span class="error">Password must be at least 8 characters</span>
-      </li>
-      <li class="confirm-password">
-        <label for="confirmPassword">Confirm Password</label>
-        <input name="confirmPassword" type="password" placeholder="Must match password field" />
-        <span class="error">Must match password</span>
-      </li>
-      <li class="form-actions">
+  <div class="basic-sign-up-wrap">
+    <form class="basic-sign-up-form" method="post" action="http://url.to.post/">
+      <legend>Basic Sign Up</legend>
+      <fieldset>
+        <ul>
+          <li class="email-address">
+            <label for="emailAddress">Email Address</label>
+            <input name="emailAddress" type="text" placeholder="ex: egon@ghostbusters.com" />
+            <span class="error">That address is already registered</span>
+          </li>
+          <li class="create-password">
+            <label for="createPassword">Create Password</label>
+            <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
+            <span class="error">Password must be at least 8 characters</span>
+          </li>
+          <li class="confirm-password">
+            <label for="confirmPassword">Confirm Password</label>
+            <input name="confirmPassword" type="password" placeholder="Must match password field" />
+            <span class="error">Must match password</span>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="form-actions">
         <button name="signUp" type="submit">Sign Up</button>
-      </li>
-    </ul>
-  </form>
+      </div>
+    </form>
+  </div>
 
-  <form class="complex-sign-up-form" method="post" action="http://url.to.post/">
-    <legend>Complex Sign Up</legend>
-    <ul>
-      <li class="full-name">
-        <label for="fullName">Full Name</label>
-        <input name="fullName" type="text" placeholder="ex: Peter Venkman" />
-        <span class="error">Must include first and last name</span>
-      </li>
-      <li class="username">
-        <label for="username">Username</label>
-        <input name="username" type="text" placeholder="ex: GhostBuster99" />
-        <span class="error">Must have no more than 16 characters</span>
-      </li>
-      <li class="email-address">
-        <label for="emailAddress">Email Address</label>
-        <input name="emailAddress" type="text" placeholder="ex: venkman@ghostbusters.com" />
-        <span class="error">That address is already registered</span>
-      </li>
-      <li class="create-password">
-        <label for="createPassword">Create Password</label>
-        <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
-        <span class="error">Password must be at least 8 characters</span>
-      </li>
-      <li class="confirm-password">
-        <label for="confirmPassword">Confirm Password</label>
-        <input name="confirmPassword" type="password" placeholder="Must match password field" />
-        <span class="error">Must match password</span>
-      </li>
-      <li class="form-actions">
+  <div class="complex-sign-up-wrap">
+    <form class="complex-sign-up-form" method="post" action="http://url.to.post/">
+      <legend>Complex Sign Up</legend>
+      <fieldset>
+        <ul>
+          <li class="full-name">
+            <label for="fullName">Full Name</label>
+            <input name="fullName" type="text" placeholder="ex: Peter Venkman" />
+            <span class="error">Must include first and last name</span>
+          </li>
+          <li class="username">
+            <label for="username">Username</label>
+            <input name="username" type="text" placeholder="ex: GhostBuster99" />
+            <span class="error">Must have no more than 16 characters</span>
+          </li>
+          <li class="email-address">
+            <label for="emailAddress">Email Address</label>
+            <input name="emailAddress" type="text" placeholder="ex: venkman@ghostbusters.com" />
+            <span class="error">That address is already registered</span>
+          </li>
+          <li class="create-password">
+            <label for="createPassword">Create Password</label>
+            <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
+            <span class="error">Password must be at least 8 characters</span>
+          </li>
+          <li class="confirm-password">
+            <label for="confirmPassword">Confirm Password</label>
+            <input name="confirmPassword" type="password" placeholder="Must match password field" />
+            <span class="error">Must match password</span>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="form-actions">
         <button name="signUp" type="submit">Sign Up</button>
-      </li>
-    </ul>
-  </form>
+      </div>
+    </form>
+  </div>
 
-  <form class="credit-card-payment-form" method="post" action="http://url.to.post/">
-    <legend>Credit Card Payment</legend>
-    <fieldset class="shipping-address">
-      <legend>Shipping Info</legend>
-      <ul>
-        <li class="name-on-card">
-          <label for="nameOnCard">Name on card</label>
-          <input name="nameOnCard" type="text" placeholder="ex: Peter C Venkman" />
-        </li>
-        <li class="street-address">
-          <label for="streetAddress">Street Address</label>
-          <input name="streetAddress" type="text" placeholder="ex: 123 Main Street" />
-        </li>
-        <li class="street-address-two">
-          <label for="streetAddressTwo">Street Address 2</label>
-          <input name="streetAddressTwo" type="text" placeholder="ex: Apt. 10" />
-        </li>
-        <li class="city">
-          <label for="city">City</label>
-          <input name="city" type="text" placeholder="ex: Boston" />
-        </li>
-        <li class="state">
-          <label for="state">State</label>
-          <input name="state" type="text" placeholder="ex: MA" />
-        </li>
-        <li class="zip">
-          <label for="zip">ZIP</label>
-          <input name="zip" type="text" placeholder="ex: 02108" />
-        </li>
-      </ul>
-    </fieldset>
-    <fieldset class="billing-info last">
-      <legend>Billing Info</legend>
-      <ul>
-        <li class="same-as-shipping">
-          <label for="sameAsShipping" class="checkbox"><input name="sameAsShipping" type="checkbox" />Same as shipping info</label>
-        </li>
-        <li class="name-on-card">
-          <label for="nameOnCard">Name on card</label>
-          <input name="nameOnCard" type="text" placeholder="ex: Peter C Venkman" />
-        </li>
-        <li class="street-address">
-          <label for="streetAddress">Street Address</label>
-          <input name="streetAddress" type="text" placeholder="ex: 123 Main Street" />
-        </li>
-        <li class="apartment-suite-unit">
-          <label for="apartmentSuiteUnit">Apartment, suite, unit, etc...</label>
-          <input name="apartmentSuiteUnit" type="text" placeholder="ex: Apt. 10" />
-        </li>
-        <li class="town-or-city">
-          <label for="townOrCity">Town or city</label>
-          <input name="townOrCity" type="text" placeholder="ex: Boston" />
-        </li>
-        <li class="state-or-province">
-          <label for="stateOrProvince">State or province</label>
-          <input name="stateOrProvince" type="text" placeholder="ex: Massachusetts" />
-        </li>
-        <li class="postal-code">
-          <label for="postalCode">Postal Code</label>
-          <input name="postalCode" type="text" placeholder="ex: 02108" />
-        </li>
-        <li class="country">
-          <label for="country">Country</label>
-          <input name="country" type="text" placeholder="ex: United States of America" />
-        </li>
-      </ul>
-    </fieldset>
-    <ul>
-      <li class="form-actions">
+  <div class="credit-card-payment-wrap">
+    <form class="credit-card-payment-form" method="post" action="http://url.to.post/">
+      <legend>Credit Card Payment</legend>
+      <fieldset class="shipping-address">
+        <legend>Shipping Info</legend>
+        <ul>
+          <li class="name-on-card">
+            <label for="nameOnCard">Name on card</label>
+            <input name="nameOnCard" type="text" placeholder="ex: Peter C Venkman" />
+          </li>
+          <li class="street-address">
+            <label for="streetAddress">Street Address</label>
+            <input name="streetAddress" type="text" placeholder="ex: 123 Main Street" />
+          </li>
+          <li class="street-address-two">
+            <label for="streetAddressTwo">Street Address 2</label>
+            <input name="streetAddressTwo" type="text" placeholder="ex: Apt. 10" />
+          </li>
+          <li class="city">
+            <label for="city">City</label>
+            <input name="city" type="text" placeholder="ex: Boston" />
+          </li>
+          <li class="state">
+            <label for="state">State</label>
+            <input name="state" type="text" placeholder="ex: MA" />
+          </li>
+          <li class="zip">
+            <label for="zip">ZIP</label>
+            <input name="zip" type="text" placeholder="ex: 02108" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="billing-info last">
+        <legend>Billing Info</legend>
+        <ul>
+          <li class="same-as-shipping">
+            <label for="sameAsShipping" class="checkbox"><input name="sameAsShipping" type="checkbox" />Same as shipping info</label>
+          </li>
+          <li class="name-on-card">
+            <label for="nameOnCard">Name on card</label>
+            <input name="nameOnCard" type="text" placeholder="ex: Peter C Venkman" />
+          </li>
+          <li class="street-address">
+            <label for="streetAddress">Street Address</label>
+            <input name="streetAddress" type="text" placeholder="ex: 123 Main Street" />
+          </li>
+          <li class="street-address-two">
+            <label for="streetAddressTwo">Street Address 2</label>
+            <input name="streetAddressTwo" type="text" placeholder="ex: Apt. 10" />
+          </li>
+          <li class="city">
+            <label for="city">City</label>
+            <input name="city" type="text" placeholder="ex: Boston" />
+          </li>
+          <li class="state">
+            <label for="state">State</label>
+            <input name="state" type="text" placeholder="ex: MA" />
+          </li>
+          <li class="zip">
+            <label for="zip">ZIP</label>
+            <input name="zip" type="text" placeholder="ex: 02108" />
+          </li>
+        </ul>
+      </fieldset>
+      <div class="form-actions">
         <button name="signUp" type="submit">Sign Up</button>
-      </li>
-    </ul>
-  </form>
+      </div>
+    </form>
+  </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.1.min.js"><\/script>')</script>
