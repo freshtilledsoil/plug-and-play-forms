@@ -304,6 +304,9 @@ textarea[readonly] {
   border-radius: 14px; }
 
 /* ==========================================================================
+Form specific grid - 12 columns
+========================================================================== */
+/* ==========================================================================
 Demo Specific Styles
 ========================================================================== */
 body {
@@ -314,11 +317,8 @@ div.basic-sign-up-wrap,
 div.complex-sign-up-wrap,
 div.credit-card-payment-wrap {
   margin: 0 auto 18px auto;
-  width: 982px; }
+  width: 662px; }
 
-/* ==========================================================================
-Form specific grid - 12 columns
-========================================================================== */
 /* ==========================================================================
 Base Styles for all forms, modified Twitter Bootstrap
 ========================================================================== */
@@ -404,7 +404,7 @@ select,
   line-height: 18px;
   margin-bottom: 18px;
   padding: 4px;
-  width: 610px; }
+  width: 370px; }
 
 select {
   height: 28px; }
@@ -448,7 +448,7 @@ form li {
   right: 0;
   text-shadow: 0 1px 0 black;
   top: 18px;
-  width: 290px; }
+  width: 210px; }
   .error::before {
     content: "";
     background: #333333;
@@ -546,19 +546,116 @@ Styles specific to individual forms
 ========================================================================== */
 form.credit-card-payment-form li.city,
 form.credit-card-payment-form li.state,
-form.credit-card-payment-form li.zip {
+form.credit-card-payment-form li.zip,
+form.credit-card-payment-form li.exp-month,
+form.credit-card-payment-form li.exp-year,
+form.credit-card-payment-form li.csc {
   float: left;
   margin-right: 20px; }
 form.credit-card-payment-form li.city {
-  width: 380px; }
+  width: 220px; }
   form.credit-card-payment-form li.city input {
-    width: 370px; }
+    width: 210px; }
 form.credit-card-payment-form li.state {
   width: 60px; }
   form.credit-card-payment-form li.state input {
     width: 50px; }
-form.credit-card-payment-form li.zip {
+form.credit-card-payment-form li.zip,
+form.credit-card-payment-form li.csc {
   margin-right: 0;
+  width: 60px; }
+  form.credit-card-payment-form li.zip input,
+  form.credit-card-payment-form li.csc input {
+    width: 50px; }
+form.credit-card-payment-form span.lock {
+  background: url(../images/glyphicons.png) no-repeat -287px -24px;
+  display: block;
+  height: 14px;
+  position: absolute;
+  top: 25px;
+  left: 359px;
+  width: 14px; }
+form.credit-card-payment-form li.exp-month,
+form.credit-card-payment-form li.exp-year {
   width: 140px; }
-  form.credit-card-payment-form li.zip input {
-    width: 130px; }
+  form.credit-card-payment-form li.exp-month select,
+  form.credit-card-payment-form li.exp-year select {
+    width: 140px; }
+form.credit-card-payment-form li.csc span.question {
+  background: url(../images/glyphicons.png) no-repeat -96px -96px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 14px;
+  margin-top: 1px;
+  position: relative;
+  width: 14px; }
+form.credit-card-payment-form li.csc div.answer {
+  background: white;
+  border: 1px solid #333333;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: default;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
+  filter: alpha(opacity=0);
+  zoom: 1;
+  padding: 5px;
+  position: absolute;
+  right: -242px;
+  top: -28px;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -ms-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  -ms-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+  width: 210px; }
+  form.credit-card-payment-form li.csc div.answer::before {
+    background: white;
+    border-left: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    content: "";
+    display: block;
+    height: 6px;
+    left: -4px;
+    position: absolute;
+    top: 30px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    width: 6px; }
+form.credit-card-payment-form li.csc div.answer:hover {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
+  filter: alpha(opacity=0);
+  zoom: 1; }
+form.credit-card-payment-form li.csc span.question:hover div.answer {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
+  filter: alpha(opacity=100);
+  zoom: 1; }

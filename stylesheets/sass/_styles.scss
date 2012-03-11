@@ -1,20 +1,4 @@
 /* ==========================================================================
-Demo Specific Styles
-========================================================================== */
-
-body {
-  padding: 60px 0 120px 0;
-}
-
-div.sign-in-wrap,
-div.basic-sign-up-wrap,
-div.complex-sign-up-wrap,
-div.credit-card-payment-wrap {
-  margin: 0 auto $lineHeight auto;
-  width: 982px; // width of form element area, plus 20px padding and 1px border per side
-}
-
-/* ==========================================================================
 Form specific grid - 12 columns
 ========================================================================== */
 $column: 60px;
@@ -34,6 +18,23 @@ $span9: ($column*9) + ($gutter*8);
 $span10: ($column*10) + ($gutter*9);
 $span11: ($column*11) + ($gutter*10);
 $span12: ($column*12) + ($gutter*11);
+
+
+/* ==========================================================================
+Demo Specific Styles
+========================================================================== */
+
+body {
+  padding: 60px 0 120px 0;
+}
+
+div.sign-in-wrap,
+div.basic-sign-up-wrap,
+div.complex-sign-up-wrap,
+div.credit-card-payment-wrap {
+  margin: 0 auto $lineHeight auto;
+  width: $span8 + 42px; // width of form element area, plus 20px padding and 1px border per side
+}
 
 
 /* ==========================================================================
@@ -114,7 +115,7 @@ select,
   line-height: $lineHeight;
   margin-bottom: $lineHeight;
   padding: 4px;
-  width: $span8 - $extra;
+  width: $span5 - $extra;
 }
 
 select {
@@ -158,7 +159,7 @@ form {
   right: 0;
   text-shadow: 0 1px 0 $black;
   top: $lineHeight;
-  width: $span4 - $extra;
+  width: $span3 - $extra;
 
   &::before {
     content: "";
@@ -192,16 +193,19 @@ form.credit-card-payment-form {
 
   li.city,
   li.state,
-  li.zip {
+  li.zip,
+  li.exp-month,
+  li.exp-year,
+  li.csc {
     float: left;
     margin-right: $gutter;
   }
 
   li.city {
-    width: $span5;
+    width: $span3;
 
     input {
-      width: $span5 - $extra;
+      width: $span3 - $extra;
     }
   }
 
@@ -213,12 +217,81 @@ form.credit-card-payment-form {
     }
   }
 
-  li.zip {
+  li.zip,
+  li.csc {
     margin-right: 0;
-    width: $span2;
+    width: $span1;
 
     input {
-      width: $span2 - $extra;
+      width: $span1 - $extra;
+    }
+  }
+
+  span.lock {
+    background: url(../images/glyphicons.png) no-repeat -287px -24px;
+    display: block;
+    height: 14px;
+    position: absolute;
+    top: 25px;
+    left: 359px;
+    width: 14px;
+  }
+
+  li.exp-month,
+  li.exp-year {
+    width: $span2;
+
+    select {
+      width: $span2;
+    }
+  }
+
+  li.csc {
+    span.question {
+      background: url(../images/glyphicons.png) no-repeat -96px -96px;
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 14px;
+      margin-top: 1px;
+      position: relative;
+      width: 14px;
+    }
+    div.answer {
+      background: $white;
+      border: 1px solid $grayDark;
+      @include border-radius(4px);
+      cursor: default;
+      @include opacity(0);
+      padding: 5px;
+      position: absolute;
+      right: -242px;
+      top: -28px;
+      @include transition(opacity, 0.2s, linear);
+      width: $span3 - $extra;
+
+      &::before {
+        background: $white;
+        border-left: 1px solid $grayDark;
+        border-bottom: 1px solid $grayDark;
+        content: "";
+        display: block;
+        height: 6px;
+        left: -4px;
+        position: absolute;
+        top: 30px;
+        @include transform(rotate(45deg));
+        @include transform-origin(center center);
+        width: 6px;
+      }
+    }
+
+    div.answer:hover {
+      @include opacity(0);
+    }
+
+    span.question:hover div.answer {
+      @include opacity(1);
     }
   }
 }
