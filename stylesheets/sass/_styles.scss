@@ -148,7 +148,7 @@ form {
   }
 }
 
-.error {
+label.error {
   background: $grayDark;
   @include border-radius(2px);
   color: $white;

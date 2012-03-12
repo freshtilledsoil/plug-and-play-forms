@@ -433,7 +433,7 @@ form li {
   padding: 0;
   position: relative; }
 
-.error {
+label.error {
   background: #333333;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -449,7 +449,7 @@ form li {
   text-shadow: 0 1px 0 black;
   top: 18px;
   width: 210px; }
-  .error::before {
+  label.error::before {
     content: "";
     background: #333333;
     display: block;
