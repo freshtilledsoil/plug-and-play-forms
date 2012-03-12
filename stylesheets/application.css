@@ -544,27 +544,27 @@ button {
 /* ==========================================================================
 Styles specific to individual forms
 ========================================================================== */
-form.credit-card-payment-form li.city,
-form.credit-card-payment-form li.state,
-form.credit-card-payment-form li.zip,
+form.credit-card-payment-form li.shipping-city, form.credit-card-payment-form li.billing-city,
+form.credit-card-payment-form li.shipping-state, form.credit-card-payment-form li.billing-state,
+form.credit-card-payment-form li.shipping-zip, form.credit-card-payment-form li.billing-zip,
 form.credit-card-payment-form li.exp-month,
 form.credit-card-payment-form li.exp-year,
 form.credit-card-payment-form li.csc {
   float: left;
   margin-right: 20px; }
-form.credit-card-payment-form li.city {
+form.credit-card-payment-form li.shipping-city, form.credit-card-payment-form li.billing-city {
   width: 220px; }
-  form.credit-card-payment-form li.city input {
+  form.credit-card-payment-form li.shipping-city input, form.credit-card-payment-form li.billing-city input {
     width: 210px; }
-form.credit-card-payment-form li.state {
+form.credit-card-payment-form li.shipping-state, form.credit-card-payment-form li.billing-state {
   width: 60px; }
-  form.credit-card-payment-form li.state input {
+  form.credit-card-payment-form li.shipping-state input, form.credit-card-payment-form li.billing-state input {
     width: 50px; }
-form.credit-card-payment-form li.zip,
+form.credit-card-payment-form li.shipping-zip, form.credit-card-payment-form li.billing-zip,
 form.credit-card-payment-form li.csc {
   margin-right: 0;
   width: 60px; }
-  form.credit-card-payment-form li.zip input,
+  form.credit-card-payment-form li.shipping-zip input, form.credit-card-payment-form li.billing-zip input,
   form.credit-card-payment-form li.csc input {
     width: 50px; }
 form.credit-card-payment-form span.lock {

@@ -109,29 +109,29 @@
       <fieldset class="shipping-address">
         <legend>Shipping Info</legend>
         <ul>
-          <li class="name">
-            <label for="name">Name</label>
-            <input name="name" type="text" placeholder="Peter C Venkman" />
+          <li class="shipping-name">
+            <label for="shippingName">Name</label>
+            <input name="shippingName" type="text" class="shippingName" placeholder="Peter C Venkman" />
           </li>
-          <li class="street-address">
-            <label for="streetAddress">Street Address</label>
-            <input name="streetAddress" type="text" placeholder="123 Main Street" />
+          <li class="shipping-street-address">
+            <label for="shippingStreetAddress">Street Address</label>
+            <input name="shippingStreetAddress" type="text" class="shippingStreetAddress" placeholder="123 Main Street" />
           </li>
-          <li class="street-address-two">
-            <label for="streetAddressTwo">Street Address 2</label>
-            <input name="streetAddressTwo" type="text" placeholder="Apt. 10" />
+          <li class="shipping-street-address-two">
+            <label for="shippingStreetAddressTwo">Street Address 2</label>
+            <input name="shippingStreetAddressTwo" type="text" class="shippingStreetAddressTwo" placeholder="Apt. 10" />
           </li>
-          <li class="city">
-            <label for="city">City</label>
-            <input name="city" type="text" placeholder="Boston" />
+          <li class="shipping-city">
+            <label for="shippingCity">City</label>
+            <input name="shippingCity" type="text" class="shippingCity" placeholder="Boston" />
           </li>
-          <li class="state">
-            <label for="state">State</label>
-            <input name="state" type="text" placeholder="MA" />
+          <li class="shipping-state">
+            <label for="shippingState">State</label>
+            <input name="shippingState" type="text" class="shippingState" placeholder="MA" />
           </li>
-          <li class="zip">
-            <label for="zip">ZIP</label>
-            <input name="zip" type="text" placeholder="02108" />
+          <li class="shipping-zip">
+            <label for="shippingZip">ZIP</label>
+            <input name="shippingZip" type="text" class="shippingZip" placeholder="02108" />
           </li>
         </ul>
       </fieldset>
@@ -141,29 +141,29 @@
           <li class="same-as-shipping">
             <label for="sameAsShipping" class="checkbox"><input name="sameAsShipping" type="checkbox" />Same as shipping info</label>
           </li>
-          <li class="name">
+          <li class="billing-name">
             <label for="name">Name</label>
-            <input name="name" type="text" placeholder="Peter C Venkman" />
+            <input name="name" type="text" class="billingName" placeholder="Peter C Venkman" />
           </li>
-          <li class="street-address">
+          <li class="billing-street-address">
             <label for="streetAddress">Street Address</label>
-            <input name="streetAddress" type="text" placeholder="123 Main Street" />
+            <input name="streetAddress" type="text" class="billingStreetAddress" placeholder="123 Main Street" />
           </li>
-          <li class="street-address-two">
+          <li class="billing-street-address-two">
             <label for="streetAddressTwo">Street Address 2</label>
-            <input name="streetAddressTwo" type="text" placeholder="Apt. 10" />
+            <input name="streetAddressTwo" type="text" class="billingStreetAddressTwo" placeholder="Apt. 10" />
           </li>
-          <li class="city">
+          <li class="billing-city">
             <label for="city">City</label>
-            <input name="city" type="text" placeholder="Boston" />
+            <input name="city" type="text" class="billingCity" placeholder="Boston" />
           </li>
-          <li class="state">
+          <li class="billing-state">
             <label for="state">State</label>
-            <input name="state" type="text" placeholder="MA" />
+            <input name="state" type="text" class="billingState" placeholder="MA" />
           </li>
-          <li class="zip">
-            <label for="zip">ZIP</label>
-            <input name="zip" type="text" placeholder="02108" />
+          <li class="billing-zip">
+            <label for="billingZip">ZIP</label>
+            <input name="billingZip" type="text" class="billingZip" placeholder="02108" />
           </li>
         </ul>
       </fieldset>
@@ -172,12 +172,12 @@
         <ul>
           <li class="card-number">
             <label for="cardNumber">Card number</label>
-            <input name="cardNumber" type="text" placeholder="4111111111111111" />
+            <input name="cardNumber" type="text" class="cardNumber" placeholder="4111111111111111" />
             <span class="lock"></span>
           </li>
           <li class="exp-month">
             <label for="expMonth">Exp. month</label>
-            <select name=expMonth">
+            <select name=expMonth" class="expMonth">
               <option value="00">---</option>
               <option value="01">January (01)</option>
               <option value="02">February (02)</option>
@@ -195,7 +195,7 @@
           </li>
           <li class="exp-year">
             <label for="expYear">Exp. year</label>
-            <select name=expYear">
+            <select name=expYear" class="expYear">
               <option value="00">---</option>
               <option value="2012">2012</option>
               <option value="2013">2013</option>
@@ -208,7 +208,7 @@
           </li>
           <li class="csc">
             <label for="csc">CSC<span class="question"><div class="answer">The <strong>Card Security Code</strong> can be found on the back of most cards. It is the final group of numbers printed on or to the right of the signature panel. On American Express cards it is printed on the right side of the front of the card, above the card number.</div></span></label>
-            <input name="csc" type="text" placeholder="456" />
+            <input name="csc" type="text" class="csc" placeholder="456" />
           </li>
         </ul>
       </fieldset>

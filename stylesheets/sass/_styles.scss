@@ -191,9 +191,9 @@ Styles specific to individual forms
 // Credit Card forms ===================================================== //
 form.credit-card-payment-form {
 
-  li.city,
-  li.state,
-  li.zip,
+  li.shipping-city, li.billing-city,
+  li.shipping-state, li.billing-state,
+  li.shipping-zip, li.billing-zip,
   li.exp-month,
   li.exp-year,
   li.csc {
@@ -201,7 +201,7 @@ form.credit-card-payment-form {
     margin-right: $gutter;
   }
 
-  li.city {
+  li.shipping-city, li.billing-city {
     width: $span3;
 
     input {
@@ -209,7 +209,7 @@ form.credit-card-payment-form {
     }
   }
 
-  li.state {
+  li.shipping-state, li.billing-state {
     width: $span1;
 
     input {
@@ -217,7 +217,7 @@ form.credit-card-payment-form {
     }
   }
 
-  li.zip,
+  li.shipping-zip, li.billing-zip,
   li.csc {
     margin-right: 0;
     width: $span1;

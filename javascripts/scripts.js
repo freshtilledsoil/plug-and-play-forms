@@ -42,4 +42,28 @@ $(document).ready(function(){
     }
   });
 
+  // validation rules for credit card payment form ================== //
+  $("form.credit-card-payment").validate({
+    rules: {
+      fullName: {
+        required: true
+      },
+      userName: {
+        required: true
+      },
+      emailAddress: {
+        required: true,
+        email: true
+      },
+      createPassword: {
+        required: true,
+        minlength: 8
+      },
+      confirmPassword: {
+        required: true,
+        equalTo: ".createPassword"
+      }
+    }
+  });
+
 });
