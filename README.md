@@ -17,7 +17,7 @@ Technologies
 Principal Author
 ----------------
 
-This project was started and will be maintained by [Steve Hickey](https://twitter.com/stevehickeydsgn), User Interface Designer and Front-End Developer at Fresh Tilled Soil.
+This project was started and will be maintained by [Steve Hickey](https://twitter.com/stevehickeydsgn), UI Designer and Front-End Developer at [Fresh Tilled Soil](http://www.freshtilledsoil.com/).
 
 Contributing
 ------------
