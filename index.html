@@ -27,12 +27,10 @@
           <li class="email-address">
             <label for="emailAddress">Email Address</label>
             <input name="emailAddress" type="text" placeholder="ex: ray@ghostbusters.com" />
-            <span class="error">Must enter a valid email address</span>
           </li>
           <li class="password">
             <label for="password">Password</label>
             <input name="password" type="password" />
-            <span class="error">Password does not match email address</span>
           </li>
           <li class="remember">
             <label for="remember" class="checkbox"><input name="remember" type="checkbox" />Remember me on this computer</label>
@@ -52,18 +50,15 @@
         <ul>
           <li class="email-address">
             <label for="emailAddress">Email Address</label>
-            <input name="emailAddress" type="text" placeholder="ex: egon@ghostbusters.com" />
-            <span class="error">That address is already registered</span>
+            <input name="emailAddress" type="text" class="emailAddress" placeholder="ex: egon@ghostbusters.com" />
           </li>
           <li class="create-password">
             <label for="createPassword">Create Password</label>
-            <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
-            <span class="error">Password must be at least 8 characters</span>
+            <input name="createPassword" type="password" class="createPassword" placeholder="Must be at least 8 characters" />
           </li>
           <li class="confirm-password">
             <label for="confirmPassword">Confirm Password</label>
-            <input name="confirmPassword" type="password" placeholder="Must match password field" />
-            <span class="error">Must match password</span>
+            <input name="confirmPassword" type="password" class="confirmPassword" placeholder="Must match password field" />
           </li>
         </ul>
       </fieldset>
@@ -81,27 +76,22 @@
           <li class="full-name">
             <label for="fullName">Full Name</label>
             <input name="fullName" type="text" placeholder="ex: Peter Venkman" />
-            <span class="error">Must include first and last name</span>
           </li>
           <li class="username">
             <label for="username">Username</label>
             <input name="username" type="text" placeholder="ex: GhostBuster99" />
-            <span class="error">Must have no more than 16 characters</span>
           </li>
           <li class="email-address">
             <label for="emailAddress">Email Address</label>
             <input name="emailAddress" type="text" placeholder="ex: venkman@ghostbusters.com" />
-            <span class="error">That address is already registered</span>
           </li>
           <li class="create-password">
             <label for="createPassword">Create Password</label>
             <input name="createPassword" type="password" placeholder="Must be at least 8 characters" />
-            <span class="error">Password must be at least 8 characters</span>
           </li>
           <li class="confirm-password">
             <label for="confirmPassword">Confirm Password</label>
             <input name="confirmPassword" type="password" placeholder="Must match password field" />
-            <span class="error">Must match password</span>
           </li>
         </ul>
       </fieldset>
@@ -228,7 +218,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.1.min.js"><\/script>')</script>
-<script src="javascripts/plugins.js"></script>
+<script src="javascripts/jquery.validate.js"></script>
 <script src="javascripts/scripts.js"></script>
 </body>
 </html>

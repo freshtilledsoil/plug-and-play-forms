@@ -654,7 +654,7 @@ form.credit-card-payment-form li.csc div.answer:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
   filter: alpha(opacity=0);
   zoom: 1; }
-form.credit-card-payment-form li.csc span.question:hover div.answer {
+form.credit-card-payment-form li.csc span.question:hover div {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
   filter: alpha(opacity=100);

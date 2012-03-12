@@ -290,7 +290,7 @@ form.credit-card-payment-form {
       @include opacity(0);
     }
 
-    span.question:hover div.answer {
+    span.question:hover div {
       @include opacity(1);
     }
   }

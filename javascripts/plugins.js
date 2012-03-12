@@ -1,3 +1,0 @@
-/*
-Add minified plugins here to reduce server calls
-*/
