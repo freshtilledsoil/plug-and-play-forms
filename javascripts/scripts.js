@@ -43,25 +43,55 @@ $(document).ready(function(){
   });
 
   // validation rules for credit card payment form ================== //
-  $("form.credit-card-payment").validate({
+  $("form.credit-card-payment-form").validate({
     rules: {
-      fullName: {
+      shippingName: {
         required: true
       },
-      userName: {
+      shippingStreetAddress: {
         required: true
       },
-      emailAddress: {
-        required: true,
-        email: true
+      shippingStreetAddressTwo: {
+        required: true
       },
-      createPassword: {
-        required: true,
-        minlength: 8
+      shippingCity: {
+        required: true
       },
-      confirmPassword: {
-        required: true,
-        equalTo: ".createPassword"
+      shippingState: {
+        required: true
+      },
+      shippingZip: {
+        required: true
+      },
+      billingName: {
+        required: true
+      },
+      billingStreetAddress: {
+        required: true
+      },
+      billingStreetAddressTwo: {
+        required: true
+      },
+      billingCity: {
+        required: true
+      },
+      billingState: {
+        required: true
+      },
+      billingZip: {
+        required: true
+      },
+      cardNumber: {
+        required: true
+      },
+      expMonth: {
+        required: true
+      },
+      expYear: {
+        required: true
+      },
+      csc: {
+        required: true
       }
     }
   });
