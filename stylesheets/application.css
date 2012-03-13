@@ -313,6 +313,7 @@ body {
   padding: 60px 0 120px 0; }
 
 div.signInWrap,
+div.searchWrap,
 div.basicSignUpWrap,
 div.complexSignUpWrap,
 div.creditCardPaymentWrap {
@@ -542,7 +543,31 @@ button {
     outline: 0; }
 
 /* ==========================================================================
-Styles specific to individual forms
+Styles specific to Credit Card Payment Form
+========================================================================== */
+form.search fieldset {
+  zoom: 1;
+  position: relative;
+  width: 380px; }
+  form.search fieldset:before, form.search fieldset:after {
+    content: "";
+    display: table; }
+  form.search fieldset:after {
+    clear: both; }
+form.search input {
+  float: left;
+  margin-right: 20px;
+  width: 370px; }
+form.search button {
+  float: left;
+  right: 3px;
+  padding: 1px 0;
+  position: absolute;
+  top: 3px;
+  width: 60px; }
+
+/* ==========================================================================
+Styles specific to Credit Card Payment Form
 ========================================================================== */
 form.creditCardPayment li.shippingCity, form.creditCardPayment li.billingCity,
 form.creditCardPayment li.shippingState, form.creditCardPayment li.billingState,

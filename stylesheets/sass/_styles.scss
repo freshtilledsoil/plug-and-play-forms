@@ -13,7 +13,7 @@ $span4: ($column*4) + ($gutter*3);
 $span5: ($column*5) + ($gutter*4);
 $span6: ($column*6) + ($gutter*5);
 $span7: ($column*7) + ($gutter*6);
-$span8: ($column*8) + ($gutter*7);
+$span8: ($column*8) + ($gutter*7); // demos only account for width of 8 columns
 $span9: ($column*9) + ($gutter*8);
 $span10: ($column*10) + ($gutter*9);
 $span11: ($column*11) + ($gutter*10);
@@ -29,6 +29,7 @@ body {
 }
 
 div.signInWrap,
+div.searchWrap,
 div.basicSignUpWrap,
 div.complexSignUpWrap,
 div.creditCardPaymentWrap {
@@ -185,10 +186,37 @@ button {
 }
 
 /* ==========================================================================
-Styles specific to individual forms
+Styles specific to Credit Card Payment Form
 ========================================================================== */
 
-// Credit Card forms ===================================================== //
+form.search {
+
+  fieldset {
+    @include clearfix;
+    position: relative;
+    width: $span5;
+  }
+
+  input {
+    float: left;
+    margin-right: $gutter;
+    width: $span5 - $extra;
+  }
+
+  button {
+    float: left;
+    right: 3px;
+    padding: 1px 0;
+    position: absolute;
+    top: 3px;
+    width: $span1;
+  }
+}
+
+/* ==========================================================================
+Styles specific to Credit Card Payment Form
+========================================================================== */
+
 form.creditCardPayment {
 
   li.shippingCity, li.billingCity,
