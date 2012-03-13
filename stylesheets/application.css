@@ -352,9 +352,6 @@ fieldset {
   margin: 0 20px 18px 20px;
   border: 0; }
 
-fieldset.last {
-  margin-bottom: 0; }
-
 legend {
   border: 0;
   display: block;
@@ -547,6 +544,7 @@ Styles specific to Credit Card Payment Form
 ========================================================================== */
 form.search fieldset {
   zoom: 1;
+  margin-bottom: 0;
   position: relative;
   width: 380px; }
   form.search fieldset:before, form.search fieldset:after {

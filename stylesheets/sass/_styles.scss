@@ -68,10 +68,6 @@ fieldset {
   border: 0;
 }
 
-fieldset.last {
-  margin-bottom: 0;
-}
-
 legend {
   border: 0;
   display: block;
@@ -193,6 +189,7 @@ form.search {
 
   fieldset {
     @include clearfix;
+    margin-bottom: 0;
     position: relative;
     width: $span5;
   }
