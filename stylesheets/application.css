@@ -631,14 +631,16 @@ form.creditCardPayment li.expYear {
   form.creditCardPayment li.expMonth select,
   form.creditCardPayment li.expYear select {
     width: 140px; }
+form.creditCardPayment li.csc label {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative; }
 form.creditCardPayment li.csc span.question {
   background: url(../images/glyphicons.png) no-repeat -96px -96px;
-  cursor: pointer;
   display: block;
   float: right;
   height: 14px;
   margin-top: 1px;
-  position: relative;
   width: 14px; }
 form.creditCardPayment li.csc div.answer {
   background: white;
@@ -699,12 +701,9 @@ form.creditCardPayment li.csc div.answer {
     -o-transform-origin: center center;
     transform-origin: center center;
     width: 6px; }
-form.creditCardPayment li.csc div.answer:hover {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
-  filter: alpha(opacity=0);
-  zoom: 1; }
-form.creditCardPayment li.csc span.question:hover div {
+form.creditCardPayment li.csc label:hover {
+  overflow: visible; }
+form.creditCardPayment li.csc label:hover div.answer {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))";
   filter: alpha(opacity=100);

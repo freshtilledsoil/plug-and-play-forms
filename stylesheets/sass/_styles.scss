@@ -296,14 +296,19 @@ form.creditCardPayment {
   }
 
   li.csc {
+
+    label {
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+    }
+
     span.question {
       background: url(../images/glyphicons.png) no-repeat -96px -96px;
-      cursor: pointer;
       display: block;
       float: right;
       height: 14px;
       margin-top: 1px;
-      position: relative;
       width: 14px;
     }
     div.answer {
@@ -335,11 +340,11 @@ form.creditCardPayment {
       }
     }
 
-    div.answer:hover {
-      @include opacity(0);
+    label:hover {
+      overflow: visible;
     }
 
-    span.question:hover div {
+    label:hover div.answer {
       @include opacity(1);
     }
   }
