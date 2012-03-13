@@ -21,6 +21,47 @@ $span12: ($column*12) + ($gutter*11);
 
 
 /* ==========================================================================
+Bootstrap buttons, simplified into a single mixins
+========================================================================== */
+
+@mixin bootstrap-button($bgColor: $blue, $textColor: $white) {
+  background-color: $bgColor;
+  @include background-image(linear-gradient(top, lighten($bgColor, 15%) 0%, $bgColor 100%));
+  background-repeat: repeat-x;
+  border: 1px solid $bgColor;
+  border-bottom-color: darken($bgColor, 5%);
+  @include border-radius(4px);
+  @include box-shadow(inset 0 1px 0 rgba($white, 0.2), 0 1px 2px rgba($black, 0.05));
+  color: $textColor;
+  cursor: pointer;
+  @include inline-block();
+  font-size: $baseFontSize;
+  font-weight: normal;
+  line-height: $lineHeight;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px darken($bgColor, 25%);
+  @include transition(background-position 0.1s linear);
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $bgColor;
+    background-position: 0 -15px;
+    color: $textColor;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: darken($bgColor, 5%);
+    background-image: none;
+    @include box-shadow(inset 0 2px 4px rgba($black, 0.15), 0 1px 2px rgba($black, 0.05));
+    outline: 0;
+  }
+}
+
+
+/* ==========================================================================
 Demo Specific Styles
 ========================================================================== */
 
@@ -56,9 +97,10 @@ form {
 }
 
 button {
+  @include bootstrap-button($blueDark, $white);
   font-family: $textFontFamily;
   font-size: $baseFontSize;
-  font-weight: normal;
+  font-weight: bold;
   line-height: $lineHeight;
 }
 
@@ -176,10 +218,6 @@ div.formActions {
   margin: 0 20px $lineHeight 20px;
 }
 
-button {
-  @include bootstrap-button($blueDark, $white);
-  font-weight: bold;
-}
 
 /* ==========================================================================
 Styles specific to Search Form
@@ -316,7 +354,10 @@ form.creditCardPayment {
       border: 1px solid $grayDark;
       @include border-radius(4px);
       cursor: default;
-      @include opacity(0);
+      opacity: 0;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=(0))"; // IE8
+      filter: alpha(opacity=(0)); // IE5-7
+      zoom: 1; // hacks IE requirement that element be positioned
       padding: 5px;
       position: absolute;
       right: -242px;
@@ -345,7 +386,10 @@ form.creditCardPayment {
     }
 
     label:hover div.answer {
-      @include opacity(1);
+      opacity: 1;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=(100))"; // IE8
+      filter: alpha(opacity=(100)); // IE5-7
+      zoom: 1; // hacks IE requirement that element be positioned
     }
   }
 }
