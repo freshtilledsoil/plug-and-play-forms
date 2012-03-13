@@ -28,10 +28,10 @@ body {
   padding: 60px 0 120px 0;
 }
 
-div.sign-in-wrap,
-div.basic-sign-up-wrap,
-div.complex-sign-up-wrap,
-div.credit-card-payment-wrap {
+div.signInWrap,
+div.basicSignUpWrap,
+div.complexSignUpWrap,
+div.creditCardPaymentWrap {
   margin: 0 auto $lineHeight auto;
   width: $span8 + 42px; // width of form element area, plus 20px padding and 1px border per side
 }
@@ -105,7 +105,7 @@ label.checkbox {
 input,
 textarea,
 select,
-.uneditable-input {
+.uneditableInput {
   @include border-radius(3px);
   border: 1px solid $grayLight;
   color: $gray;
@@ -122,7 +122,7 @@ select {
   height: $lineHeight+10;
 }
 
-.uneditable-textarea {
+.uneditableTextarea {
   height: auto;
   width: auto;
 }
@@ -175,7 +175,7 @@ label.error {
   }
 }
 
-div.form-actions {
+div.formActions {
   margin: 0 20px $lineHeight 20px;
 }
 
@@ -189,41 +189,64 @@ Styles specific to individual forms
 ========================================================================== */
 
 // Credit Card forms ===================================================== //
-form.credit-card-payment-form {
+form.creditCardPayment {
 
-  li.shipping-city, li.billing-city,
-  li.shipping-state, li.billing-state,
-  li.shipping-zip, li.billing-zip,
-  li.exp-month,
-  li.exp-year,
+  li.shippingCity, li.billingCity,
+  li.shippingState, li.billingState,
+  li.shippingZip, li.billingZip,
+  li.expMonth,
+  li.expYear,
   li.csc {
     float: left;
     margin-right: $gutter;
   }
 
-  li.shipping-city, li.billing-city {
+  li.shippingCity, li.billingCity {
     width: $span3;
 
     input {
       width: $span3 - $extra;
     }
+
+    label.error {
+      top: $lineHeight * 3;
+
+      &::before {
+        left: 11px;
+        top: -4px;
+      }
+    }
   }
 
-  li.shipping-state, li.billing-state {
+  li.shippingState, li.billingState {
     width: $span1;
 
     input {
       width: $span1 - $extra;
     }
+
+    label.error {
+      top: $lineHeight * 3;
+      right: -160px;
+
+      &::before {
+        left: 11px;
+        top: -4px;
+      }
+    }
   }
 
-  li.shipping-zip, li.billing-zip,
+  li.shippingZip, li.billingZip,
   li.csc {
     margin-right: 0;
     width: $span1;
 
     input {
       width: $span1 - $extra;
+    }
+
+    label.error {
+      right: -240px;
     }
   }
 
@@ -237,8 +260,8 @@ form.credit-card-payment-form {
     width: 14px;
   }
 
-  li.exp-month,
-  li.exp-year {
+  li.expMonth,
+  li.expYear {
     width: $span2;
 
     select {

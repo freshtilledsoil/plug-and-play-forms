@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // validation rules for basic sign up form ======================== //
-  $("form.basic-sign-up-form").validate({
+  $("form.basicSignUp").validate({
     rules: {
       emailAddress: {
         required: true,
@@ -13,13 +13,13 @@ $(document).ready(function(){
       },
       confirmPassword: {
         required: true,
-        equalTo: ".createPassword"
+        equalTo: "form.basicSignUp li.createPassword input"
       }
     }
   });
 
   // validation rules for complex sign up form ====================== //
-  $("form.complex-sign-up-form").validate({
+  $("form.complexSignUp").validate({
     rules: {
       fullName: {
         required: true
@@ -37,13 +37,13 @@ $(document).ready(function(){
       },
       confirmPassword: {
         required: true,
-        equalTo: ".createPassword"
+        equalTo: "form.complexSignUp li.createPassword input"
       }
     }
   });
 
   // validation rules for credit card payment form ================== //
-  $("form.credit-card-payment-form").validate({
+  $("form.creditCardPayment").validate({
     rules: {
       shippingName: {
         required: true
@@ -82,7 +82,8 @@ $(document).ready(function(){
         required: true
       },
       cardNumber: {
-        required: true
+        required: true,
+        creditcard: true
       },
       expMonth: {
         required: true
