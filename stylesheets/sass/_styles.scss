@@ -182,7 +182,7 @@ button {
 }
 
 /* ==========================================================================
-Styles specific to Credit Card Payment Form
+Styles specific to Search Form
 ========================================================================== */
 
 form.search {
@@ -201,11 +201,12 @@ form.search {
   }
 
   button {
+    @include border-left-radius(0);
     float: left;
-    right: 3px;
-    padding: 1px 0;
+    right: 0;
+    padding-left: 0; padding-right: 0; //fix text-align center bug
     position: absolute;
-    top: 3px;
+    top: 0;
     width: $span1;
   }
 }
