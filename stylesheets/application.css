@@ -786,29 +786,28 @@ form.search fieldset {
   zoom: 1;
   margin-bottom: 0;
   position: relative;
-  width: 380px; }
+  width: 300px; }
   form.search fieldset:before, form.search fieldset:after {
     content: "";
     display: table; }
   form.search fieldset:after {
     clear: both; }
 form.search input {
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
   float: left;
   margin-right: 20px;
-  width: 370px; }
+  padding-left: 10px;
+  width: 284px; }
 form.search button {
-  -webkit-border-top-left-radius: 0;
-  -moz-border-top-left-radius: 0;
-  -moz-border-radius-topleft: 0;
-  -ms-border-top-left-radius: 0;
-  -o-border-top-left-radius: 0;
-  border-top-left-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-bottom-left-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  -ms-border-bottom-left-radius: 0;
-  -o-border-bottom-left-radius: 0;
-  border-bottom-left-radius: 0;
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  -ms-border-radius: 0 14px 14px 0;
+  -o-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
   float: left;
   right: 0;
   padding-left: 0;

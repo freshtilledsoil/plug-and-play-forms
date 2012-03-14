@@ -306,17 +306,19 @@ form.search {
     @include clearfix;
     margin-bottom: 0;
     position: relative;
-    width: $span5;
+    width: $span4;
   }
 
   input {
+    @include border-radius(($lineHeight + $extra) / 2);
     float: left;
     margin-right: $gutter;
-    width: $span5 - $extra;
+    padding-left: 10px;
+    width: $span4 - ($extra + 6px); //account for extra padding-left
   }
 
   button {
-    @include border-left-radius(0);
+    @include border-radius(0 (($lineHeight + $extra) / 2) (($lineHeight + $extra) / 2) 0);
     float: left;
     right: 0;
     padding-left: 0; padding-right: 0; //fix text-align center bug
