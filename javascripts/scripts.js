@@ -15,39 +15,39 @@ $(document).ready(function(){
   // allow nav to hide and reveal rest of forms
   // will refactor the bejeezus out of this later
   $('#signInReveal').click(function() {
-    event.preventDefault();
     $('nav a').removeClass('current');
     $(this).addClass('current');
     $('.formWrap').hide();
     $('.signInWrap').fadeIn();
+    event.preventDefault();
   });
   $('#searchReveal').click(function() {
-    event.preventDefault();
     $('nav a').removeClass('current');
     $(this).addClass('current');
     $('.formWrap').hide();
     $('.searchWrap').fadeIn();
+    event.preventDefault();
   });
   $('#basicSignUpReveal').click(function() {
-    event.preventDefault();
     $('nav a').removeClass('current');
     $(this).addClass('current');
     $('.formWrap').hide();
     $('.basicSignUpWrap').fadeIn();
+    event.preventDefault();
   });
   $('#complexSignUpReveal').click(function() {
-    event.preventDefault();
     $('nav a').removeClass('current');
     $(this).addClass('current');
     $('.formWrap').hide();
     $('.complexSignUpWrap').fadeIn();
+    event.preventDefault();
   });
   $('#creditCardPaymentReveal').click(function() {
-    event.preventDefault();
     $('nav a').removeClass('current');
     $(this).addClass('current');
     $('.formWrap').hide();
     $('.creditCardPaymentWrap').fadeIn();
+    event.preventDefault();
   });
 
 });
