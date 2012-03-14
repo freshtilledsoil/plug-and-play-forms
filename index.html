@@ -17,7 +17,20 @@
 </head>
 <body>
 
-  <div class="signInWrap">
+  <header>
+    <h1>Plug and Play Forms</h1>
+    <nav class="hide">
+      <ul>
+        <li><a href="#" id="signInReveal" class="current">Sign In</a></li>
+        <li><a href="#" id="searchReveal">Search</a></li>
+        <li><a href="#" id="basicSignUpReveal">Basic Sign Up</a></li>
+        <li><a href="#" id="complexSignUpReveal">Complex Sign Up</a></li>
+        <li><a href="#" id="creditCardPaymentReveal">Credit Card Payment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="signInWrap formWrap">
     <form class="signIn" method="get">
     <!--<form class="signIn" method="post" action="http://url.to.post/">-->
       <legend>Sign In</legend>
@@ -42,7 +55,7 @@
     </form>
   </div>
 
-  <div class="searchWrap">
+  <div class="searchWrap formWrap">
     <form class="search" method="get">
     <!--<form class="search" method="post" action="http://url.to.post/">-->
       <legend>Search</legend>
@@ -53,7 +66,7 @@
     </form>
   </div>
 
-  <div class="basicSignUpWrap">
+  <div class="basicSignUpWrap formWrap">
     <form class="basicSignUp" method="get">
     <!--<form class="basicSignUp" method="post" action="http://url.to.post/">-->
       <legend>Basic Sign Up</legend>
@@ -79,7 +92,7 @@
     </form>
   </div>
 
-  <div class="complexSignUpWrap">
+  <div class="complexSignUpWrap formWrap">
     <form class="complexSignUp" method="get">
     <!--<form class="complexSignUp" method="post" action="http://url.to.post/">-->
       <legend>Complex Sign Up</legend>
@@ -113,7 +126,7 @@
     </form>
   </div>
 
-  <div class="creditCardPaymentWrap">
+  <div class="creditCardPaymentWrap formWrap">
     <form class="creditCardPayment" method="get">
     <!--<form class="creditCardPayment" method="post" action="http://url.to.post/">-->
       <legend>Credit Card Payment</legend>
@@ -229,8 +242,17 @@
     </form>
   </div>
 
+  <footer>
+    <div class="center">
+      <p>Principal Contributor: <a href="https://twitter.com/stevehickeydsgn" target="_blank">Steve Hickey</a> | Company: <a href="http://freshtilledsoil.com" target="_blank">Fresh Tilled Soil</a></p>
+    </div>
+  </footer>
+
+  <a href="https://github.com/freshtilledsoil/plug-and-play-forms" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/fork-me.png" alt="Fork me on GitHub"></a>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="javascripts/jquery.validate.js"></script>
+<script src="javascripts/validation-rules.js"></script>
 <script src="javascripts/scripts.js"></script>
 </body>
 </html>

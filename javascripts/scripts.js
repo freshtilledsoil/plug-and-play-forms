@@ -1,100 +1,53 @@
+/*
+ * Demo Scripts for Plug and Play Forms
+ * Author: Steve Hickey - @stevehickeydsgn
+ *
+ */
+
+
 $(document).ready(function(){
 
-  // validation rules for basic sign up form ======================== //
-  $("form.basicSignUp").validate({
-    rules: {
-      emailAddress: {
-        required: true,
-        email: true
-      },
-      createPassword: {
-        required: true,
-        minlength: 8
-      },
-      confirmPassword: {
-        required: true,
-        equalTo: "form.basicSignUp li.createPassword input"
-      }
-    }
-  });
+  // if user has javascript enabled, set up nav and hide all but first form
+  $('nav').removeClass('hide');
+  $('.formWrap').addClass('hide');
+  $('.formWrap:first').addClass('show');
 
-  // validation rules for complex sign up form ====================== //
-  $("form.complexSignUp").validate({
-    rules: {
-      fullName: {
-        required: true
-      },
-      userName: {
-        required: true
-      },
-      emailAddress: {
-        required: true,
-        email: true
-      },
-      createPassword: {
-        required: true,
-        minlength: 8
-      },
-      confirmPassword: {
-        required: true,
-        equalTo: "form.complexSignUp li.createPassword input"
-      }
-    }
+  // allow nav to hide and reveal rest of forms
+  // will refactor the bejeezus out of this later
+  $('#signInReveal').click(function() {
+    event.preventDefault();
+    $('nav a').removeClass('current');
+    $(this).addClass('current');
+    $('.formWrap').hide();
+    $('.signInWrap').fadeIn();
   });
-
-  // validation rules for credit card payment form ================== //
-  $("form.creditCardPayment").validate({
-    rules: {
-      shippingName: {
-        required: true
-      },
-      shippingStreetAddress: {
-        required: true
-      },
-      shippingStreetAddressTwo: {
-        required: true
-      },
-      shippingCity: {
-        required: true
-      },
-      shippingState: {
-        required: true
-      },
-      shippingZip: {
-        required: true
-      },
-      billingName: {
-        required: true
-      },
-      billingStreetAddress: {
-        required: true
-      },
-      billingStreetAddressTwo: {
-        required: true
-      },
-      billingCity: {
-        required: true
-      },
-      billingState: {
-        required: true
-      },
-      billingZip: {
-        required: true
-      },
-      cardNumber: {
-        required: true,
-        creditcard: true
-      },
-      expMonth: {
-        required: true
-      },
-      expYear: {
-        required: true
-      },
-      csc: {
-        required: true
-      }
-    }
+  $('#searchReveal').click(function() {
+    event.preventDefault();
+    $('nav a').removeClass('current');
+    $(this).addClass('current');
+    $('.formWrap').hide();
+    $('.searchWrap').fadeIn();
+  });
+  $('#basicSignUpReveal').click(function() {
+    event.preventDefault();
+    $('nav a').removeClass('current');
+    $(this).addClass('current');
+    $('.formWrap').hide();
+    $('.basicSignUpWrap').fadeIn();
+  });
+  $('#complexSignUpReveal').click(function() {
+    event.preventDefault();
+    $('nav a').removeClass('current');
+    $(this).addClass('current');
+    $('.formWrap').hide();
+    $('.complexSignUpWrap').fadeIn();
+  });
+  $('#creditCardPaymentReveal').click(function() {
+    event.preventDefault();
+    $('nav a').removeClass('current');
+    $(this).addClass('current');
+    $('.formWrap').hide();
+    $('.creditCardPaymentWrap').fadeIn();
   });
 
 });

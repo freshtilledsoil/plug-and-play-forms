@@ -65,8 +65,54 @@ Bootstrap buttons, simplified into a single mixins
 Demo Specific Styles
 ========================================================================== */
 
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
 body {
-  padding: 60px 0 120px 0;
+  height: 100%;
+  padding: 0;
+}
+
+header {
+  margin: ($lineHeight * 2) auto;
+  width: $span8 + 42px; // width of form element area, plus 20px padding and 1px border per side
+}
+
+h1 {
+  margin-bottom: ($lineHeight / 2);
+}
+
+nav ul {
+  @include clearfix;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    float: left;
+    margin-right: 20px;
+  }
+
+  a {
+    background-color: $white;
+    @include border-radius(2px);
+    color: $grayDark;
+    padding: 3px 6px;
+    text-decoration: none;
+    @include transition(background-color, 0.2s, linear);
+  }
+
+  a:hover {
+    background-color: $grayDark;
+    color: $white;
+  }
+
+  a.current {
+    background-color: $grayDark;
+    color: $white;
+  }
 }
 
 div.signInWrap,
@@ -76,6 +122,37 @@ div.complexSignUpWrap,
 div.creditCardPaymentWrap {
   margin: 0 auto $lineHeight auto;
   width: $span8 + 42px; // width of form element area, plus 20px padding and 1px border per side
+}
+
+footer {
+  @include box-shadow(inset 0 1px 1px rgba($black, 0.1));
+  color: $grayDark;
+  margin-top: $lineHeight * 10;
+  padding: $lineHeight 0;
+  text-align: center;
+
+  div.center {
+    margin: 0 auto;
+    width: $span8 + 42px; // width of form element area, plus 20px padding and 1px border per side
+  }
+
+  a {
+    color: $blueDark;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: darken($blueDark, 5%);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 
