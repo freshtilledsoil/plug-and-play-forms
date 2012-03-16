@@ -352,6 +352,15 @@ nav ul {
     background-color: #333333;
     color: white; }
 
+header p {
+  margin: 36px 0 18px 0; }
+  header p a {
+    color: #0064cd;
+    font-weight: bold;
+    text-decoration: none; }
+  header p a:hover {
+    color: #0058b3; }
+
 div.signInWrap,
 div.searchWrap,
 div.basicSignUpWrap,
@@ -432,6 +441,7 @@ button {
   zoom: 1;
   *display: inline;
   *vertical-align: auto;
+  font-size: 12px;
   font-weight: normal;
   line-height: 18px;
   padding: 4px 10px;

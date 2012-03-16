@@ -1,7 +1,7 @@
 Plug and Play Forms
 ===================
 
-A variety of forms that should be more or less plug and play. Styled with Bootstrap, using a modified version of jQuery Form Validation.
+A variety of forms that should be more or less plug and play. The are styled with modified [Bootstrap](http://twitter.github.com/bootstrap/), written with [Sass](http://sass-lang.com/) and [Bourbon](http://thoughtbot.com/bourbon/), and use [jQuery Form Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation/). This is a work in progress, so please be gentle. Do feel free to point out mistakes or to create pull requests.
 
 View demo: [http://freshtilledsoil.github.com/plug-and-play-forms/](http://freshtilledsoil.github.com/plug-and-play-forms/)
 

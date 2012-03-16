@@ -115,6 +115,20 @@ nav ul {
   }
 }
 
+header p {
+  margin: ($lineHeight * 2) 0 $lineHeight 0;
+
+  a {
+    color: $blueDark;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: darken($blueDark, 5%);
+  }
+}
+
 div.signInWrap,
 div.searchWrap,
 div.basicSignUpWrap,
