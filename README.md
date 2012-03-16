@@ -3,6 +3,8 @@ Plug and Play Forms
 
 A variety of forms that should be more or less plug and play. Styled with Bootstrap, using a modified version of jQuery Form Validation.
 
+View demo: [http://freshtilledsoil.github.com/plug-and-play-forms/](http://freshtilledsoil.github.com/plug-and-play-forms/)
+
 Technologies
 ------------
 
