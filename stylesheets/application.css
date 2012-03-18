@@ -1,4 +1,13 @@
 /* ==========================================================================
+Select Bootstrap variables
+========================================================================== */
+/* ==========================================================================
+Form specific grid - 12 columns, 940px
+========================================================================== */
+/* ==========================================================================
+Bootstrap buttons, simplified into a single mixin
+========================================================================== */
+/* ==========================================================================
 Reset adapted from Twitter Bootstrap
 ========================================================================== */
 html, body {
@@ -226,12 +235,6 @@ pre {
   overflow-y: scroll; }
 
 /* ==========================================================================
-Form specific grid - 12 columns, 940px
-========================================================================== */
-/* ==========================================================================
-Bootstrap buttons, simplified into a single mixins
-========================================================================== */
-/* ==========================================================================
 Demo Specific Styles
 ========================================================================== */
 html {
@@ -343,6 +346,11 @@ footer {
 /* ==========================================================================
 Base Styles for all forms, modified Twitter Bootstrap
 ========================================================================== */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 form {
   background: #f5f5f5;
   border: 1px solid #555555;
@@ -360,7 +368,163 @@ form {
   font-size: 12px;
   font-weight: normal;
   line-height: 18px; }
+  form ul {
+    zoom: 1;
+    margin: 0;
+    list-style-type: none;
+    padding: 0; }
+    form ul:before, form ul:after {
+      content: "";
+      display: table; }
+    form ul:after {
+      clear: both; }
+  form li {
+    margin: 0;
+    padding: 0;
+    position: relative; }
 
+fieldset {
+  padding: 0;
+  margin: 0 20px 18px 20px;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 620px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 36px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  margin: 6px 20px 18px 20px; }
+
+fieldset legend {
+  border: 0;
+  font-size: 14.4px;
+  font-weight: bold;
+  line-height: 21.6px;
+  margin: 0;
+  padding-bottom: 6px; }
+
+label {
+  margin: 0;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  color: #333333; }
+
+label.checkbox {
+  margin-bottom: 18px; }
+
+input,
+textarea,
+select,
+.uneditable-input {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  height: 28px;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #999999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  line-height: 18px;
+  margin-bottom: 18px;
+  width: 380px; }
+
+.uneditable-textarea {
+  width: auto;
+  height: auto; }
+
+label input,
+label textarea,
+label select {
+  display: block; }
+
+label.error {
+  background: #333333;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: white;
+  display: block;
+  font-size: 12px;
+  height: auto;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 1px 0 black;
+  top: 18px;
+  width: 220px; }
+  label.error::before {
+    content: "";
+    background: #333333;
+    display: block;
+    height: 8px;
+    left: -4px;
+    position: absolute;
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    width: 8px; }
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+  line-height: normal;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 0 \9;
+  /* IE9 and down */ }
+
+input[type="image"] {
+  border: 0; }
+
+input[type="file"] {
+  width: auto;
+  padding: initial;
+  line-height: initial;
+  border: initial;
+  background-color: white;
+  background-color: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 button {
   background-color: #0064cd;
   background-image: -webkit-linear-gradient(top, #1b8aff 0%, #0064cd 100%);
@@ -419,12 +583,20 @@ button {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
-  line-height: 18px; }
+  line-height: 18px;
+  width: auto;
+  height: auto; }
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover,
   button:hover {
     background-color: #0064cd;
     background-position: 0 -15px;
     color: white;
     text-decoration: none; }
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  input[type="submit"]:active,
   button:active {
     background-color: #0058b3;
     background-image: none;
@@ -433,172 +605,9 @@ button {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     outline: 0; }
 
-fieldset {
-  padding: 0;
-  margin: 0 20px 18px 20px;
-  border: 0; }
-
-legend {
-  border: 0;
-  display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 36px;
-  margin: 6px 20px 18px 20px;
-  padding: 0; }
-
-fieldset legend {
-  border: 0;
-  font-size: 14.4px;
-  font-weight: bold;
-  line-height: 21.6px;
-  margin: 0;
-  padding-bottom: 6px; }
-
-label {
-  display: block;
-  height: 18px;
-  line-height: 18px;
-  margin: 0;
-  color: #333333; }
-
-label.checkbox {
-  margin-bottom: 18px; }
-
-input,
-textarea,
-select,
-.uneditableInput {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #999999;
-  color: #555555;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: baseline;
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  font-size: 12px;
-  height: 18px;
-  line-height: 18px;
-  margin-bottom: 18px;
-  padding: 4px;
-  width: 370px; }
-
-select {
-  height: 28px; }
-
-.uneditableTextarea {
-  height: auto;
-  width: auto; }
-
-label input,
-label textarea,
-label select {
-  display: block; }
-
-form ul {
-  zoom: 1;
-  margin: 0;
-  list-style-type: none;
-  padding: 0; }
-  form ul:before, form ul:after {
-    content: "";
-    display: table; }
-  form ul:after {
-    clear: both; }
-form li {
-  margin: 0;
-  padding: 0;
-  position: relative; }
-
-label.error {
-  background: #333333;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  color: white;
-  display: block;
-  font-size: 12px;
-  padding: 5px;
-  position: absolute;
-  right: 0;
-  text-shadow: 0 1px 0 black;
-  top: 18px;
-  width: 210px; }
-  label.error::before {
-    content: "";
-    background: #333333;
-    display: block;
-    height: 8px;
-    left: -4px;
-    position: absolute;
-    top: 11px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    -ms-transform-origin: center center;
-    -o-transform-origin: center center;
-    transform-origin: center center;
-    width: 8px; }
-
-div.formActions {
-  margin: 0 20px 18px 20px; }
-
-input[type="image"],
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 3px 0;
-  *margin-top: 0;
-  /* IE7 */
-  line-height: normal;
-  cursor: pointer;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  border: 0 \9;
-  /* IE9 and down */ }
-
-input[type="image"] {
-  border: 0; }
-
-input[type="file"] {
-  width: auto;
-  padding: initial;
-  line-height: initial;
-  border: initial;
-  background-color: white;
-  background-color: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
-
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  width: auto;
-  height: auto; }
-
 select,
 input[type="file"] {
   height: 28px;
-  /* In IE7, the height of the select element cannot be changed by height, only font-size */
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
   line-height: 28px; }
@@ -702,9 +711,12 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  background-color: #f5f5f5;
+  background-color: #eeeeee;
   border-color: #eeeeee;
   cursor: not-allowed; }
+
+div.formActions {
+  margin: 0 20px 18px 20px; }
 
 /* ==========================================================================
 Styles specific to Search Form
@@ -727,14 +739,22 @@ form.search input {
   border-radius: 14px;
   float: left;
   margin-right: 20px;
-  padding-left: 10px;
-  width: 284px; }
+  padding-left: 14px;
+  padding-right: 14px;
+  width: 300px; }
 form.search button {
-  -webkit-border-radius: 0 14px 14px 0;
-  -moz-border-radius: 0 14px 14px 0;
-  -ms-border-radius: 0 14px 14px 0;
-  -o-border-radius: 0 14px 14px 0;
-  border-radius: 0 14px 14px 0;
+  -webkit-border-top-right-radius: 14px;
+  -moz-border-top-right-radius: 14px;
+  -moz-border-radius-topright: 14px;
+  -ms-border-top-right-radius: 14px;
+  -o-border-top-right-radius: 14px;
+  border-top-right-radius: 14px;
+  -webkit-border-bottom-right-radius: 14px;
+  -moz-border-bottom-right-radius: 14px;
+  -moz-border-radius-bottomright: 14px;
+  -ms-border-bottom-right-radius: 14px;
+  -o-border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 14px;
   float: left;
   right: 0;
   padding-left: 0;
@@ -757,7 +777,7 @@ form.creditCardPayment li.csc {
 form.creditCardPayment li.shippingCity, form.creditCardPayment li.billingCity {
   width: 220px; }
   form.creditCardPayment li.shippingCity input, form.creditCardPayment li.billingCity input {
-    width: 210px; }
+    width: 220px; }
   form.creditCardPayment li.shippingCity label.error, form.creditCardPayment li.billingCity label.error {
     top: 54px; }
     form.creditCardPayment li.shippingCity label.error::before, form.creditCardPayment li.billingCity label.error::before {
@@ -766,7 +786,7 @@ form.creditCardPayment li.shippingCity, form.creditCardPayment li.billingCity {
 form.creditCardPayment li.shippingState, form.creditCardPayment li.billingState {
   width: 60px; }
   form.creditCardPayment li.shippingState input, form.creditCardPayment li.billingState input {
-    width: 50px; }
+    width: 60px; }
   form.creditCardPayment li.shippingState label.error, form.creditCardPayment li.billingState label.error {
     top: 54px;
     right: -160px; }
@@ -779,7 +799,7 @@ form.creditCardPayment li.csc {
   width: 60px; }
   form.creditCardPayment li.shippingZip input, form.creditCardPayment li.billingZip input,
   form.creditCardPayment li.csc input {
-    width: 50px; }
+    width: 60px; }
   form.creditCardPayment li.shippingZip label.error, form.creditCardPayment li.billingZip label.error,
   form.creditCardPayment li.csc label.error {
     right: -240px; }
@@ -797,7 +817,7 @@ form.creditCardPayment li.expYear {
   form.creditCardPayment li.expMonth select,
   form.creditCardPayment li.expYear select {
     width: 140px; }
-form.creditCardPayment li.csc label {
+form.creditCardPayment li.csc label.cscExplain {
   cursor: pointer;
   overflow: hidden;
   position: relative; }
@@ -823,8 +843,8 @@ form.creditCardPayment li.csc div.answer {
   zoom: 1;
   padding: 5px;
   position: absolute;
-  right: -242px;
-  top: -28px;
+  right: -240px;
+  top: -26px;
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
   -ms-transition-property: opacity;
@@ -845,7 +865,8 @@ form.creditCardPayment li.csc div.answer {
   -ms-transition-delay: 0;
   -o-transition-delay: 0;
   transition-delay: 0;
-  width: 210px; }
+  width: 220px;
+  z-index: 50; }
   form.creditCardPayment li.csc div.answer::before {
     background: white;
     border-left: 1px solid #333333;
@@ -867,9 +888,9 @@ form.creditCardPayment li.csc div.answer {
     -o-transform-origin: center center;
     transform-origin: center center;
     width: 6px; }
-form.creditCardPayment li.csc label:hover {
+form.creditCardPayment li.csc label.cscExplain:hover {
   overflow: visible; }
-form.creditCardPayment li.csc label:hover div.answer {
+form.creditCardPayment li.csc label.cscExplain:hover div.answer {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=(100))";
   filter: alpha(opacity=100);

@@ -1,67 +1,4 @@
 /* ==========================================================================
-Form specific grid - 12 columns, 940px
-========================================================================== */
-$column: 60px;
-$gutter: 20px;
-
-$extra: 10px; // subtract this to account for padding and borders
-
-$span1: $column;
-$span2: ($column*2) + ($gutter);
-$span3: ($column*3) + ($gutter*2);
-$span4: ($column*4) + ($gutter*3);
-$span5: ($column*5) + ($gutter*4);
-$span6: ($column*6) + ($gutter*5);
-$span7: ($column*7) + ($gutter*6);
-$span8: ($column*8) + ($gutter*7); // demos only account for width of 8 columns
-$span9: ($column*9) + ($gutter*8);
-$span10: ($column*10) + ($gutter*9);
-$span11: ($column*11) + ($gutter*10);
-$span12: ($column*12) + ($gutter*11);
-
-
-/* ==========================================================================
-Bootstrap buttons, simplified into a single mixins
-========================================================================== */
-
-@mixin bootstrap-button($bgColor: $blue, $textColor: $white) {
-  background-color: $bgColor;
-  @include background-image(linear-gradient(top, lighten($bgColor, 15%) 0%, $bgColor 100%));
-  background-repeat: repeat-x;
-  border: 1px solid $bgColor;
-  border-bottom-color: darken($bgColor, 5%);
-  @include border-radius(4px);
-  @include box-shadow(inset 0 1px 0 rgba($white, 0.2), 0 1px 2px rgba($black, 0.05));
-  color: $textColor;
-  cursor: pointer;
-  @include inline-block();
-  font-size: $baseFontSize;
-  font-weight: normal;
-  line-height: $lineHeight;
-  padding: 4px 10px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px 1px darken($bgColor, 25%);
-  @include transition(background-position 0.1s linear);
-  vertical-align: middle;
-
-  &:hover {
-    background-color: $bgColor;
-    background-position: 0 -15px;
-    color: $textColor;
-    text-decoration: none;
-  }
-
-  &:active {
-    background-color: darken($bgColor, 5%);
-    background-image: none;
-    @include box-shadow(inset 0 2px 4px rgba($black, 0.15), 0 1px 2px rgba($black, 0.05));
-    outline: 0;
-  }
-}
-
-
-/* ==========================================================================
 Demo Specific Styles
 ========================================================================== */
 
@@ -174,6 +111,12 @@ footer {
 Base Styles for all forms, modified Twitter Bootstrap
 ========================================================================== */
 
+* { // fix input width brittleness a la Paul Irish http://paulirish.com/2012/box-sizing-border-box-ftw/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 form {
   background: $grayLightest;
   border: 1px solid $gray;
@@ -185,85 +128,7 @@ form {
   font-size: $baseFontSize;
   font-weight: normal;
   line-height: $lineHeight;
-}
 
-button {
-  @include bootstrap-button($blueDark, $white);
-  font-family: $textFontFamily;
-  font-size: $baseFontSize;
-  font-weight: bold;
-  line-height: $lineHeight;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0 20px $lineHeight 20px;
-  border: 0;
-}
-
-legend {
-  border: 0;
-  display: block;
-  font-family: $headerFontFamily;
-  font-size: $baseFontSize*1.5;
-  line-height: $lineHeight*2;
-  margin: 6px 20px $lineHeight 20px;
-  padding: 0;
-}
-
-fieldset legend {
-  border: 0;
-  font-size: $baseFontSize*1.2;
-  font-weight: bold;
-  line-height: $lineHeight*1.2;
-  margin: 0;
-  padding-bottom: $lineHeight/3;
-}
-
-label {
-  display: block;
-  height: $lineHeight;
-  line-height: $lineHeight;
-  margin: 0;
-  color: $grayDark;
-}
-
-label.checkbox {
-  margin-bottom: $lineHeight;
-}
-
-input,
-textarea,
-select,
-.uneditableInput {
-  @include border-radius(3px);
-  border: 1px solid $grayLight;
-  color: $gray;
-  @include inline-block;
-  font-size: $baseFontSize;
-  height: $lineHeight;
-  line-height: $lineHeight;
-  margin-bottom: $lineHeight;
-  padding: 4px;
-  width: $span5 - $extra;
-}
-
-select {
-  height: $lineHeight+10;
-}
-
-.uneditableTextarea {
-  height: auto;
-  width: auto;
-}
-
-label input,
-label textarea,
-label select {
-  display: block;
-}
-
-form {
   ul {
     @include clearfix;
     margin: 0;
@@ -278,18 +143,85 @@ form {
   }
 }
 
+fieldset {
+  padding: 0;
+  margin: 0 20px $lineHeight 20px;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: $span8;
+  padding: 0;
+  font-size: $baseFontSize * 1.5;
+  line-height: $lineHeight * 2;
+  color: $grayDark;
+  border: 0;
+  border-bottom: 1px solid $grayLighter;
+  margin: 6px 20px $lineHeight 20px;
+}
+
+fieldset legend {
+  border: 0;
+  font-size: $baseFontSize*1.2;
+  font-weight: bold;
+  line-height: $lineHeight*1.2;
+  margin: 0;
+  padding-bottom: $lineHeight/3;
+}
+
+label {
+  margin: 0;
+  display: block;
+  height: $lineHeight;
+  line-height: $lineHeight;
+  color: $grayDark;
+}
+
+label.checkbox {
+  margin-bottom: $lineHeight;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  @include inline-block;
+  height: $height;
+  padding: 4px;
+  font-size: $baseFontSize;
+  line-height: $lineHeight;
+  color: $gray;
+  border: 1px solid $grayLight;
+  @include border-radius(3px);
+  line-height: $lineHeight;
+  margin-bottom: $lineHeight;
+  width: $span5;
+}
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+label input,
+label textarea,
+label select {
+  display: block;
+}
+
 label.error {
   background: $grayDark;
   @include border-radius(2px);
   color: $white;
   display: block;
   font-size: 12px;
+  height: auto;
   padding: 5px;
   position: absolute;
   right: 0;
   text-shadow: 0 1px 0 $black;
   top: $lineHeight;
-  width: $span3 - $extra;
+  width: $span3;
 
   &::before {
     content: "";
@@ -303,10 +235,6 @@ label.error {
     @include transform-origin(center center);
     width: 8px;
   }
-}
-
-div.formActions {
-  margin: 0 20px $lineHeight 20px;
 }
 
 input[type="image"],
@@ -338,16 +266,22 @@ input[type="file"] {
 
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+button {
+  @include bootstrap-button($blueDark, $white);
+  font-family: $textFontFamily;
+  font-size: $baseFontSize;
+  font-weight: bold;
+  line-height: $lineHeight;
   width: auto;
   height: auto;
 }
 
 select,
 input[type="file"] {
-  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  height: $height;
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
-  line-height: 28px;
+  line-height: $height;
 }
 
 input[type="file"] {
@@ -355,7 +289,7 @@ input[type="file"] {
 }
 
 select {
-  width: 220px; // default input width + 10px of padding that doesn't get applied
+  width: $span3;
   background-color: $white;
 }
 
@@ -388,7 +322,7 @@ input[type="hidden"] {
 
 .controls > .radio:first-child,
 .controls > .checkbox:first-child {
-  padding-top: 5px; // has to be padding because margin collapses
+  padding-top: 5px; // has to be padding because margin collaspes
 }
 
 .radio.inline,
@@ -398,6 +332,7 @@ input[type="hidden"] {
   margin-bottom: 0;
   vertical-align: middle;
 }
+
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
   margin-left: 10px; // space out consecutive inline controls
@@ -406,7 +341,7 @@ input[type="hidden"] {
 input,
 textarea {
   @include box-shadow(inset 0 1px 1px rgba($black, 0.075));
-  @include transition(all linear 0.2s);
+  @include transition(all linear .2s);
 }
 input:focus,
 textarea:focus {
@@ -431,11 +366,14 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  background-color: $grayLightest;
+  background-color: $grayLighter;
   border-color: $grayLighter;
   cursor: not-allowed;
 }
 
+div.formActions {
+  margin: 0 20px $lineHeight 20px;
+}
 
 /* ==========================================================================
 Styles specific to Search Form
@@ -451,15 +389,16 @@ form.search {
   }
 
   input {
-    @include border-radius(($lineHeight + $extra) / 2);
+    @include border-radius(14px);
     float: left;
     margin-right: $gutter;
-    padding-left: 10px;
-    width: $span4 - ($extra + 6px); //account for extra padding-left
+    padding-left: 14px;
+    padding-right: 14px;
+    width: $span4;
   }
 
   button {
-    @include border-radius(0 (($lineHeight + $extra) / 2) (($lineHeight + $extra) / 2) 0);
+    @include border-right-radius(14px);
     float: left;
     right: 0;
     padding-left: 0; padding-right: 0; //fix text-align center bug
@@ -489,7 +428,7 @@ form.creditCardPayment {
     width: $span3;
 
     input {
-      width: $span3 - $extra;
+      width: $span3;
     }
 
     label.error {
@@ -506,7 +445,7 @@ form.creditCardPayment {
     width: $span1;
 
     input {
-      width: $span1 - $extra;
+      width: $span1;
     }
 
     label.error {
@@ -526,7 +465,7 @@ form.creditCardPayment {
     width: $span1;
 
     input {
-      width: $span1 - $extra;
+      width: $span1;
     }
 
     label.error {
@@ -555,7 +494,7 @@ form.creditCardPayment {
 
   li.csc {
 
-    label {
+    label.cscExplain {
       cursor: pointer;
       overflow: hidden;
       position: relative;
@@ -580,10 +519,11 @@ form.creditCardPayment {
       zoom: 1; // hacks IE requirement that element be positioned
       padding: 5px;
       position: absolute;
-      right: -242px;
-      top: -28px;
+      right: -240px;
+      top: -26px;
       @include transition(opacity, 0.2s, linear);
-      width: $span3 - $extra;
+      width: $span3;
+      z-index: 50;
 
       &::before {
         background: $white;
@@ -601,11 +541,11 @@ form.creditCardPayment {
       }
     }
 
-    label:hover {
+    label.cscExplain:hover {
       overflow: visible;
     }
 
-    label:hover div.answer {
+    label.cscExplain:hover div.answer {
       opacity: 1;
       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=(100))"; // IE8
       filter: alpha(opacity=(100)); // IE5-7
