@@ -16,12 +16,21 @@ Technologies
 
 * [jQuery.validate.js](https://github.com/jzaefferer/jquery-validation) is currently included to quickly provide inline client-side form validation. Eventually, I plan to remove this in favor of lighter custom validation written for each form.
 
-Principal Author
-----------------
+TODOs
+----
 
-This project was started and will be maintained by [Steve Hickey](https://twitter.com/stevehickeydsgn), UI Designer and Front-End Developer at [Fresh Tilled Soil](http://www.freshtilledsoil.com/).
+* Write lighter custom validation
+* Add more form types (suggestions welcome)
+* Add AJAX form submission
+* Add sample PHP files for directing form output
+* Modify error class(es) to position without additional styling
 
 Contributing
 ------------
 
 Pull requests are welcome, but as this project is young and much of it is still in flux, rejections may seem arbitrary. I will continue to solidify its purpose as fast as possible to make contribution guidelines clearer. Rest assured, I have a clear goal in mind and will do my best to continue to clarify it.
+
+Principal Author
+----------------
+
+This project was started and will be maintained by [Steve Hickey](https://twitter.com/stevehickeydsgn), UI Designer and Front-End Developer at [Fresh Tilled Soil](http://www.freshtilledsoil.com/).
