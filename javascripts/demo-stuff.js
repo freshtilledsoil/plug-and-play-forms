@@ -1,9 +1,5 @@
-/*
- * Demo Scripts for Plug and Play Forms
- * Author: Steve Hickey - @stevehickeydsgn
- *
- */
-
+/* Demo Scripts for Plug and Play Forms
+ * Author: Steve Hickey - @stevehickeydsgn */
 
 $(document).ready(function(){
 

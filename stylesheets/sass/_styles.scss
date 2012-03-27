@@ -128,6 +128,7 @@ form {
   font-size: $baseFontSize;
   font-weight: normal;
   line-height: $lineHeight;
+  position: relative;
 
   ul {
     @include clearfix;
@@ -373,6 +374,26 @@ textarea[readonly] {
 
 div.formActions {
   margin: 0 20px $lineHeight 20px;
+}
+
+div.loading {
+  display: none; // hide until jQuery calls it
+  background: rgba($black, 0.5);
+  @include border-radius(4px);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+
+  span.spinner {
+    background: url('../images/loader.png') no-repeat center center;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    -webkit-animation: spin 1.5s infinite linear;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {-webkit-transform:rotate(360deg);}
+  to {-webkit-transform:rotate(0deg);}
 }
 
 /* ==========================================================================

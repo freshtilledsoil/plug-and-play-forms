@@ -32,8 +32,7 @@
   </header>
 
   <div class="signInWrap formWrap">
-    <form class="signIn" method="get">
-    <!--<form class="signIn" method="post" action="http://url.to.post/">-->
+    <form class="signIn" method="post" action="processSignIn.php">
       <legend>Sign In</legend>
       <fieldset>
         <ul>
@@ -53,6 +52,7 @@
       <div class="formActions">
         <button name="signIn" type="submit">Sign In</button>
       </div>
+      <div class="loading"><span class="spinner"></span></div>
     </form>
   </div>
 
@@ -252,9 +252,10 @@
   <a href="https://github.com/freshtilledsoil/plug-and-play-forms" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/fork-me.png" alt="Fork me on GitHub"></a>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="javascripts/demo-stuff.js"></script>
 <script src="javascripts/jquery.validate.js"></script>
 <script src="javascripts/validation-rules.js"></script>
-<script src="javascripts/scripts.js"></script>
+<script src="javascripts/ajax-submission.js"></script>
 
 <script>
   var _gaq=[['_setAccount','UA-30109844-1'],['_trackPageview']];

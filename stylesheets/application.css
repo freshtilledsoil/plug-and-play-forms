@@ -367,7 +367,8 @@ form {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
-  line-height: 18px; }
+  line-height: 18px;
+  position: relative; }
   form ul {
     zoom: 1;
     margin: 0;
@@ -717,6 +718,35 @@ textarea[readonly] {
 
 div.formActions {
   margin: 0 20px 18px 20px; }
+
+div.loading {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  div.loading span.spinner {
+    background: url("../images/loader.png") no-repeat center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation: spin 1.5s infinite linear; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(360deg); }
+
+  to {
+    -webkit-transform: rotate(0deg); } }
 
 /* ==========================================================================
 Styles specific to Search Form
