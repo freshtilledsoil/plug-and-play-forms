@@ -376,6 +376,17 @@ div.formActions {
   margin: 0 20px $lineHeight 20px;
 }
 
+p.signedIn {
+  display: block;
+  width: $span8;
+  padding: 0;
+  font-size: $baseFontSize * 1.5;
+  line-height: $lineHeight * 2;
+  color: $grayDark;
+  border: 0;
+  margin: 6px 20px;
+}
+
 div.loading {
   display: none; // hide until jQuery calls it
   background: rgba($black, 0.5);

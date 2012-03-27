@@ -17,20 +17,21 @@ $(document).ready(function(){
     var remember = undefined;
     if ( $('input[name="remember"]').is(':checked') ) { var remember = true; }
     else { var remember = false; }
-
     var data = 'emailAddress=' + emailAddress + '&password=' + password + '&remember=' + remember;
-
-    $('input').attr('disabled','true');
 
     $('.loading').show();
 
     $.ajax({
       url: "../processSignIn.php",
-      type: "GET",
+      type: "POST",
       data: data,
       cache: false,
       success: function () {
-        $('form.signIn').fadeOut();
+        $('form.signIn').html('<p class="signedIn">You have successfully signed in.</p>');
+      },
+      error: function () {
+        alert('Sorry, there was an error. Please try again.');
+        $('.loading').hide();
       }
     });
 

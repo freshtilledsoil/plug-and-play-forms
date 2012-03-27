@@ -719,6 +719,16 @@ textarea[readonly] {
 div.formActions {
   margin: 0 20px 18px 20px; }
 
+p.signedIn {
+  display: block;
+  width: 620px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 36px;
+  color: #333333;
+  border: 0;
+  margin: 6px 20px; }
+
 div.loading {
   display: none;
   background: rgba(0, 0, 0, 0.5);
