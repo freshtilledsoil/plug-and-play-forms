@@ -2,6 +2,9 @@
  * AJAX Submission for Plug and Play Forms
  * Author: Steve Hickey - @stevehickeydsgn
  *
+ * Multiple uses of $(document).ready are for copy/paste convenience only.
+ * Don't worry, I wouldn't do that IRL.
+ *
  */
 
 
@@ -21,11 +24,14 @@ $(document).ready(function(){
 
     $('.loading').show();
 
-    $.ajax({ // I know this isn't doing jack yet. I'm getting to it
-      url: "processSignIn.php",
-      type: "POST",
+    $.ajax({
+      url: "../processSignIn.php",
+      type: "GET",
       data: data,
-      success: alert('success!')
+      cache: false,
+      success: function () {
+        $('form.signIn').fadeOut();
+      }
     });
 
     return false;
