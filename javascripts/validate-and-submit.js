@@ -141,7 +141,6 @@ $(document).ready(function(){
   });
 
   $('[name="sameAsShipping"]').change(function(){
-
     if ( $('[name="sameAsShipping"]').is(':checked') ) {
       $('[name="billingName"]').val( $('[name="shippingName"]').val() );
       $('[name="billingStreetAddress"]').val( $('[name="shippingStreetAddress"]').val() );
@@ -176,8 +175,6 @@ $(document).ready(function(){
     var data = 'shippingName=' + shippingName + '&shippingStreetAddress=' + shippingStreetAddress + '&shippingStreetAddressTwo=' + shippingStreetAddressTwo + '&shippingCity=' + shippingCity + '&shippingState=' + shippingState + '&shippingZip=' + shippingZip + '&billingName=' + billingName + '&billingStreetAddress=' + billingStreetAddress + '&billingStreetAddressTwo=' + billingStreetAddressTwo + '&billingCity=' + billingCity + '&billingState=' + billingState + '&billingZip=' + billingZip + '&cardNumber=' + cardNumber + '&expMonth=' + expMonth + '&expYear=' + expYear + '&csc=' + csc;
 
     $('.loading').show();
-
-    alert(data);
 
     $.ajax({
       url: "../processCreditCardPayment.php",

@@ -139,11 +139,11 @@
         <ul>
           <li class="shippingName">
             <label for="shippingName">Name</label>
-            <input name="shippingName" type="text" placeholder="Peter C Venkman" />
+            <input name="shippingName" type="text" placeholder="Peter C Venkman" required="required" />
           </li>
           <li class="shippingStreetAddress">
             <label for="shippingStreetAddress">Street Address</label>
-            <input name="shippingStreetAddress" type="text" placeholder="123 Main Street" />
+            <input name="shippingStreetAddress" type="text" placeholder="123 Main Street" required="required" />
           </li>
           <li class="shippingStreetAddressTwo">
             <label for="shippingStreetAddressTwo">Street Address 2</label>
@@ -151,15 +151,15 @@
           </li>
           <li class="shippingCity">
             <label for="shippingCity">City</label>
-            <input name="shippingCity" type="text" placeholder="Boston" />
+            <input name="shippingCity" type="text" placeholder="Boston" required="required" />
           </li>
           <li class="shippingState">
             <label for="shippingState">State</label>
-            <input name="shippingState" type="text" placeholder="MA" />
+            <input name="shippingState" type="text" placeholder="MA" required="required" />
           </li>
           <li class="shippingZip">
             <label for="shippingZip">ZIP</label>
-            <input name="shippingZip" type="text" placeholder="02108" />
+            <input name="shippingZip" type="text" placeholder="02108" required="required" />
           </li>
         </ul>
       </fieldset>
@@ -169,11 +169,11 @@
         <ul>
           <li class="billingName">
             <label for="billingName">Name</label>
-            <input name="billingName" type="text" placeholder="Peter C Venkman" />
+            <input name="billingName" type="text" placeholder="Peter C Venkman" required="required" />
           </li>
           <li class="billingStreetAddress">
             <label for="billingStreetAddress">Street Address</label>
-            <input name="billingStreetAddress" type="text" placeholder="123 Main Street" />
+            <input name="billingStreetAddress" type="text" placeholder="123 Main Street" required="required" />
           </li>
           <li class="billingStreetAddressTwo">
             <label for="billingStreetAddressTwo">Street Address 2</label>
@@ -181,15 +181,15 @@
           </li>
           <li class="billingCity">
             <label for="billingCity">City</label>
-            <input name="billingCity" type="text" placeholder="Boston" />
+            <input name="billingCity" type="text" placeholder="Boston" required="required" />
           </li>
           <li class="billingState">
             <label for="billingState">State</label>
-            <input name="billingState" type="text" placeholder="MA" />
+            <input name="billingState" type="text" placeholder="MA" required="required" />
           </li>
           <li class="billingZip">
             <label for="billingZip">ZIP</label>
-            <input name="billingZip" type="text" placeholder="02108" />
+            <input name="billingZip" type="text" placeholder="02108" required="required" />
           </li>
         </ul>
       </fieldset>
@@ -198,12 +198,12 @@
         <ul>
           <li class="cardNumber">
             <label for="cardNumber">Card number</label>
-            <input name="cardNumber" type="text" placeholder="4111111111111111" />
+            <input name="cardNumber" type="text" placeholder="4111111111111111" required="required" />
             <span class="lock"></span>
           </li>
           <li class="expMonth">
             <label for="expMonth">Exp. month</label>
-            <select name="expMonth">
+            <select name="expMonth" required="required">
               <option value="00">---</option>
               <option value="01">January (01)</option>
               <option value="02">February (02)</option>
@@ -220,7 +220,7 @@
             </select>
           </li>
           <li class="expYear">
-            <label for="expYear">Exp. year</label>
+            <label for="expYear" required="required">Exp. year</label>
             <select name="expYear">
               <option value="00">---</option>
               <option value="2012">2012</option>
@@ -234,7 +234,7 @@
           </li>
           <li class="csc">
             <label for="csc" class="cscExplain">CSC<span class="question"></span><div class="answer">The <strong>Card Security Code</strong> can be found on the back of most cards. It is the final group of numbers printed on or to the right of the signature panel. On American Express cards it is printed on the right side of the front of the card, above the card number.</div></label>
-            <input name="csc" type="text" placeholder="456" />
+            <input name="csc" type="text" placeholder="456" required="required" />
           </li>
         </ul>
       </fieldset>
