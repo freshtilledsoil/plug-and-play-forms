@@ -140,46 +140,44 @@ $(document).ready(function(){
     }
   });
 
-  $('input[name="sameAsShipping"]').change(function(){
-    if ( $('fieldset.billingAddress ul').is(':visible') ) {
+  $('[name="sameAsShipping"]').change(function(){
+
+    if ( $('[name="sameAsShipping"]').is(':checked') ) {
+      $('[name="billingName"]').val( $('[name="shippingName"]').val() );
+      $('[name="billingStreetAddress"]').val( $('[name="shippingStreetAddress"]').val() );
+      $('[name="billingStreetAddressTwo"]').val( $('[name="shippingStreetAddressTwo"]').val() );
+      $('[name="billingCity"]').val( $('[name="shippingCity"]').val() );
+      $('[name="billingState"]').val( $('[name="shippingState"]').val() );
+      $('[name="billingZip"]').val( $('[name="shippingZip"]').val() );
       $('fieldset.billingAddress ul').hide();
     } else {
+      $('fieldset.billingAddress ul input').val('');
       $('fieldset.billingAddress ul').show();
     }
   });
 
-  $('button[name="purchase"]').click(function(){ // AJAX submit
-
-    var shippingName =                $('input[name="shippingName"]').val();
-    var shippingStreetAddress =       $('input[name="shippingStreetAddress"]').val();
-    var shippingStreetAddressTwo =    $('input[name="shippingStreetAddressTwo"]').val();
-    var shippingCity =                $('input[name="shippingCity"]').val();
-    var shippingState =               $('input[name="shippingState"]').val();
-    var shippingZip =                 $('input[name="shippingZip"]').val();
-    var sameAsShipping =              undefined;
-    if ( $('input[name="sameAsShipping"]').is(':checked') ) {
-      var billingName =               shippingName;
-      var billingStreetAddress =      shippingStreetAddress;
-      var billingStreetAddressTwo =   shippingStreetAddressTwo;
-      var billingCity =               shippingCity;
-      var billingState =              shippingState;
-      var billingZip =                shippingZip;
-    } else {
-      var billingName =               $('input[name="billingName"]').val();
-      var billingStreetAddress =      $('input[name="billingStreetAddress"]').val();
-      var billingStreetAddressTwo =   $('input[name="billingStreetAddressTwo"]').val();
-      var billingCity =               $('input[name="billingCity"]').val();
-      var billingState =              $('input[name="billingState"]').val();
-      var billingZip =                $('input[name="billingZip"]').val();
-    };
-    var cardNumber =                  $('input[name="cardNumber"]').val();
-    var expMonth =                    $('select[name="expMonth"]').val();
-    var expYear =                     $('select[name="expYear"]').val();
-    var csc =                         $('input[name="csc"]').val();
-
+  $('[name="purchase"]').click(function(){ // AJAX submit
+    var shippingName =                $('[name="shippingName"]').val();
+    var shippingStreetAddress =       $('[name="shippingStreetAddress"]').val();
+    var shippingStreetAddressTwo =    $('[name="shippingStreetAddressTwo"]').val();
+    var shippingCity =                $('[name="shippingCity"]').val();
+    var shippingState =               $('[name="shippingState"]').val();
+    var shippingZip =                 $('[name="shippingZip"]').val();
+    var billingName =                 $('[name="billingName"]').val();
+    var billingStreetAddress =        $('[name="billingStreetAddress"]').val();
+    var billingStreetAddressTwo =     $('[name="billingStreetAddressTwo"]').val();
+    var billingCity =                 $('[name="billingCity"]').val();
+    var billingState =                $('[name="billingState"]').val();
+    var billingZip =                  $('[name="billingZip"]').val();
+    var cardNumber =                  $('[name="cardNumber"]').val();
+    var expMonth =                    $('[name="expMonth"]').val();
+    var expYear =                     $('[name="expYear"]').val();
+    var csc =                         $('[name="csc"]').val();
     var data = 'shippingName=' + shippingName + '&shippingStreetAddress=' + shippingStreetAddress + '&shippingStreetAddressTwo=' + shippingStreetAddressTwo + '&shippingCity=' + shippingCity + '&shippingState=' + shippingState + '&shippingZip=' + shippingZip + '&billingName=' + billingName + '&billingStreetAddress=' + billingStreetAddress + '&billingStreetAddressTwo=' + billingStreetAddressTwo + '&billingCity=' + billingCity + '&billingState=' + billingState + '&billingZip=' + billingZip + '&cardNumber=' + cardNumber + '&expMonth=' + expMonth + '&expYear=' + expYear + '&csc=' + csc;
 
     $('.loading').show();
+
+    alert(data);
 
     $.ajax({
       url: "../processCreditCardPayment.php",
@@ -193,8 +191,6 @@ $(document).ready(function(){
         $('.loading').hide();
       }
     });
-
     return false;
-
   });
 });
