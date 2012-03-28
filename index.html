@@ -64,6 +64,7 @@
             <input name="search" type="text" placeholder="Enter search term" />
             <button name="search" type="submit">Search</button>
       </fieldset>
+      <div class="loading"><span class="spinner"></span></div>
     </form>
   </div>
 
@@ -90,6 +91,7 @@
       <div class="formActions">
         <button name="signUp" type="submit">Sign Up</button>
       </div>
+      <div class="loading"><span class="spinner"></span></div>
     </form>
   </div>
 
@@ -124,6 +126,7 @@
       <div class="formActions">
         <button name="signUp" type="submit">Sign Up</button>
       </div>
+      <div class="loading"><span class="spinner"></span></div>
     </form>
   </div>
 
@@ -202,7 +205,7 @@
           </li>
           <li class="expMonth">
             <label for="expMonth">Exp. month</label>
-            <select name=expMonth">
+            <select name="expMonth">
               <option value="00">---</option>
               <option value="01">January (01)</option>
               <option value="02">February (02)</option>
@@ -220,7 +223,7 @@
           </li>
           <li class="expYear">
             <label for="expYear">Exp. year</label>
-            <select name=expYear">
+            <select name="expYear">
               <option value="00">---</option>
               <option value="2012">2012</option>
               <option value="2013">2013</option>
@@ -240,6 +243,7 @@
       <div class="formActions">
         <button name="purchase" type="submit">Purchase</button>
       </div>
+      <div class="loading"><span class="spinner"></span></div>
     </form>
   </div>
 
@@ -254,8 +258,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="javascripts/demo-stuff.js"></script>
 <script src="javascripts/jquery.validate.js"></script>
-<script src="javascripts/validation-rules.js"></script>
-<script src="javascripts/ajax-submission.js"></script>
+<script src="javascripts/validate-and-submit.js"></script>
 
 <script>
   var _gaq=[['_setAccount','UA-30109844-1'],['_trackPageview']];

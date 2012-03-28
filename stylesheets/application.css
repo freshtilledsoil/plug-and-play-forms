@@ -719,7 +719,8 @@ textarea[readonly] {
 div.formActions {
   margin: 0 20px 18px 20px; }
 
-p.signedIn {
+p.submitSuccess,
+p.submitError {
   display: block;
   width: 620px;
   padding: 0;
@@ -728,6 +729,9 @@ p.signedIn {
   color: #333333;
   border: 0;
   margin: 6px 20px; }
+
+p.submitError {
+  color: #9d261d; }
 
 div.loading {
   display: none;

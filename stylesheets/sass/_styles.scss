@@ -376,7 +376,8 @@ div.formActions {
   margin: 0 20px $lineHeight 20px;
 }
 
-p.signedIn {
+p.submitSuccess,
+p.submitError {
   display: block;
   width: $span8;
   padding: 0;
@@ -385,6 +386,10 @@ p.signedIn {
   color: $grayDark;
   border: 0;
   margin: 6px 20px;
+}
+
+p.submitError {
+  color: $red;
 }
 
 div.loading {
