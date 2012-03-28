@@ -140,6 +140,14 @@ $(document).ready(function(){
     }
   });
 
+  $('input[name="sameAsShipping"]').change(function(){
+    if ( $('fieldset.billingAddress ul').is(':visible') ) {
+      $('fieldset.billingAddress ul').hide();
+    } else {
+      $('fieldset.billingAddress ul').show();
+    }
+  });
+
   $('button[name="purchase"]').click(function(){ // AJAX submit
 
     var shippingName =                $('input[name="shippingName"]').val();
@@ -177,7 +185,6 @@ $(document).ready(function(){
       url: "../processCreditCardPayment.php",
       type: "POST",
       data: data,
-      cache: false,
       success: function () {
         $('form.creditCardPayment').html('<p class="submitSuccess">You have successfully paid for this purchase.</p>');
       },
