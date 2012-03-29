@@ -1,9 +1,14 @@
 Plug and Play Forms
 ===================
 
-A variety of forms that should be more or less plug and play. They are styled with modified [Bootstrap](http://twitter.github.com/bootstrap/), written with [Sass](http://sass-lang.com/) and [Bourbon](http://thoughtbot.com/bourbon/), and use [jQuery Form Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation/). This is a work in progress, so please be gentle. Do feel free to point out mistakes or to create pull requests.
+A set of front-end code for common form types that should be more or less plug and play. They are styled with modified [Bootstrap](http://twitter.github.com/bootstrap/), written with [Sass](http://sass-lang.com/) and [Bourbon](http://thoughtbot.com/bourbon/), and use [jQuery Form Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation/). This is a work in progress, so please be gentle. Do feel free to point out mistakes or to create pull requests.
 
 View demo: [http://freshtilledsoil.github.com/plug-and-play-forms/](http://freshtilledsoil.github.com/plug-and-play-forms/)
+
+A note on security:
+-------------------
+
+This project does not intend to support back-end functionality, just how the form looks and behaves. Some forms may include PHP scripts to interact with the AJAX submission, but output is directed to dummy files and there is no attempt whatsoever to be secure. DO NOT use the PHP that's included. Get a qualified developer to set up a secure interaction with a database. We are not responsible for anything that happens to your site if you use these forms.
 
 Technologies
 ------------
