@@ -17,6 +17,14 @@ $(document).ready(function(){
   });
 });
 
+// Imitate loading and prevent submission of forms until AJAX-ed ======================== //
+$(document).ready(function(){
+  $('button[name="signIn"], button[name="search"]').click(function(){
+    $('.loading').show();
+    return false;
+  });
+});
+
 
 
 // basicSignUp form ===================================================================== //
