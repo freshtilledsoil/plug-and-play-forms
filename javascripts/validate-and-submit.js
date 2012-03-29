@@ -172,20 +172,20 @@ $(document).ready(function(){
     var expMonth =                    $('[name="expMonth"]').val();
     var expYear =                     $('[name="expYear"]').val();
     var csc =                         $('[name="csc"]').val();
-    var data = 'shippingName=' + shippingName + '&shippingStreetAddress=' + shippingStreetAddress + '&shippingStreetAddressTwo=' + shippingStreetAddressTwo + '&shippingCity=' + shippingCity + '&shippingState=' + shippingState + '&shippingZip=' + shippingZip + '&billingName=' + billingName + '&billingStreetAddress=' + billingStreetAddress + '&billingStreetAddressTwo=' + billingStreetAddressTwo + '&billingCity=' + billingCity + '&billingState=' + billingState + '&billingZip=' + billingZip + '&cardNumber=' + cardNumber + '&expMonth=' + expMonth + '&expYear=' + expYear + '&csc=' + csc;
+
+    var dataString = 'shippingName=' + shippingName + '&shippingStreetAddress=' + shippingStreetAddress + '&shippingStreetAddressTwo=' + shippingStreetAddressTwo + '&shippingCity=' + shippingCity + '&shippingState=' + shippingState + '&shippingZip=' + shippingZip + '&billingName=' + billingName + '&billingStreetAddress=' + billingStreetAddress + '&billingStreetAddressTwo=' + billingStreetAddressTwo + '&billingCity=' + billingCity + '&billingState=' + billingState + '&billingZip=' + billingZip + '&cardNumber=' + cardNumber + '&expMonth=' + expMonth + '&expYear=' + expYear + '&csc=' + csc;
 
     $('.loading').show();
 
     $.ajax({
-      url: "../processCreditCardPayment.php",
+      url: "processCreditCardPayment.php",
       type: "POST",
-      data: data,
+      data: dataString,
       success: function () {
         $('form.creditCardPayment').html('<p class="submitSuccess">You have successfully paid for this purchase.</p>');
       },
       error: function () {
         $('form.creditCardPayment').html('<p class="submitError">Sorry, there was an error. Please try again.</p>');
-        $('.loading').hide();
       }
     });
     return false;
